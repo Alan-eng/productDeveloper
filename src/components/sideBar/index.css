@@ -1,0 +1,35 @@
+.sideBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-color: #181621;
+    width: 200px;
+    height: 100%;
+}
+
+.sideBarHeader {
+    color: #539CFF;
+    padding-top: 32px;
+    text-decoration: none;
+}
+
+.sideBarHeader > span:first-child{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 32px;
+    padding-left: 32px;
+    color: white;
+}
+
+.menu li {
+    padding-top: 16px;
+}
