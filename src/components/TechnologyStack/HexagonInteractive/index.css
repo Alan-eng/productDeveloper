@@ -1,0 +1,127 @@
+.root {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    padding-left: 16px;
+    color: #d8d8d8;
+}
+
+.hexagon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 58px;
+    height: 40px;
+    background-color: #64c7cc;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    border-left: solid 3px #333333;
+    border-right: solid 3px #333333;
+    z-index: 2;
+    user-select: none;
+  }
+  
+  .hexagon:before,
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+  }
+  
+  .hexagon:before {
+    top: -22px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: inherit;
+    border-bottom: none;
+    border-left: none;
+  }
+  
+  .hexagon:after {
+    bottom: -22px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: inherit;
+    border-top: none;
+    border-right: none;
+  }
+  
+  .hexagon:hover {
+    background-color: blue;
+  }
+
+  .hexagon * {
+    z-index: 3;
+  }
+  
+  .hexagonText {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .hexagonJS {
+    color: #f7df1e;
+    background-color: #181621;
+    border-color: #f7df1e;
+  }
+  
+  .hexagonHTMLCSS {
+    color: white;
+    background-color: #f16529;
+    border-color: #e44d26;
+  }
+  
+  .hexagonReact {
+    color: #61dafb;
+    background-color: #261300;
+    border-color: #61dafb;
+  }
+  
+  .hexagonRedux {
+    color: #6d44b3;
+    background-color: #08003f;
+    border-color: #6d44b3;
+  }
+  
+  .hexagonPostCSS {
+    background-color: #220b0a;
+    border-color: #b93a1b;
+  }
+  
+  .hexagonWebpack {
+    background-color: #1c78c0;
+    border-color: white;
+  }
+  
+  .hexagonFigma {
+    background-color: #2e3139;
+    border-color: #1abcfe;
+  }
+  
+  .hexagonIllustrator {
+    color: #b95d0a;
+    background-color: #22140a;
+    border-color: #b95d0a;
+  }
+  
+  .hexagonPhotoshop {
+    color: #7794bb;
+    background-color: #0d0736;
+    border-color: #7794bb;
+  }
+  
+  .hexagonAnimate {
+    color: #b93a1b;
+    background-color: #220b0a;
+    border-color: #b93a1b;
+  }
+  /* ----------------------------------------------- */

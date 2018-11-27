@@ -1,0 +1,24 @@
+ h2, 
+ h4 {
+     color: white;
+ }
+
+
+.myTechnologyStack {
+    display: flex;
+    justify-content: space-around;
+}
+
+.frontendStack,
+.designStack {
+    display: flex;
+    flex-direction: column;
+}
+
+.frontendStack div:nth-child(even){
+    margin-left: 32px;
+}
+
+.designStack div:nth-child(even){
+    margin-left: 32px;
+}
