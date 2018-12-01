@@ -6,9 +6,10 @@ const aboutMe = () => {
 
     return (
         <div>
-            <h1>Front-end Developer, Designer</h1>
+            <h1>My recent Projects</h1>
             <h4>I design and code beautifully simple things, and I love what I do.</h4>
             <div className={style.root}>
+
                 <img src={Alan} className="portrait" alt="portrait" />
                 <article className={style.menu}>
                     Hi, I’m Alan. Nice to meet you. <br />

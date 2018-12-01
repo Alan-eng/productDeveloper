@@ -1,24 +1,28 @@
- h2, 
- h4 {
-     color: white;
- }
+.root {
+  margin-bottom: 40px;
+}
 
+h2,
+h4 {
+  text-align: center;
+  color: #84b8ff;
+}
 
-.myTechnologyStack {
-    display: flex;
-    justify-content: space-around;
+.columnContainer {
+  display: flex;
+  justify-content: space-around;
 }
 
 .frontendStack,
 .designStack {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.frontendStack div:nth-child(even){
-    margin-left: 32px;
+.frontendStack div:nth-child(even) {
+  margin-left: 32px;
 }
 
-.designStack div:nth-child(even){
-    margin-left: 32px;
+.designStack div:nth-child(even) {
+  margin-left: 32px;
 }

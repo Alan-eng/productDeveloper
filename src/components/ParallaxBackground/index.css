@@ -1,0 +1,12 @@
+.parallax {
+  background-image: url("./js.png");
+  height: 200px;
+  border-radius: 4px;
+  background-color: #181621;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-size: 600px;
+}

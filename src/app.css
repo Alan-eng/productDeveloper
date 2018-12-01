@@ -1,10 +1,28 @@
 .centerContainer {
-    max-width: 600px;
-    margin: auto;
-    font-weight: 300;
-    line-height: 22px
+  max-width: 600px;
+  margin: auto;
+  font-weight: 300;
+  background-color: #181621;
+  padding: 24px;
 }
 
-.centerContainer h1, h4 {
-    color: #84B8FF;
+.centerContainer h1,
+h4 {
+  margin: 0;
+  padding-top: 24px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  color: #539cff;
+}
+
+.particlesWrapper {
+  width: 100%;
+  top: 0;
+  position: absolute;
+  z-index: -1;
 }

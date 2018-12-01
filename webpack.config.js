@@ -2,33 +2,33 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
+    template: "./src/index.html",
+    filename: "./index.html"
 });
 
 module.exports = {
     entry: './src/index.js',
     module: {
         rules: [
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-                loader: "babel-loader",
-                options: {
-                    cacheDirectory: true,
-                    presets: ['@babel/preset-env','@babel/preset-react']
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        cacheDirectory: true,
+                        presets: ['@babel/preset-env', '@babel/preset-react']
+                    }
                 }
-            }
-        },
-        {
-            test: /\.css$/,
-            use: [
+            },
+            {
+                test: /\.css$/,
+                use: [
                     {
                         loader: 'style-loader' //The style-loader injects the styles lazily making them useable on-demand via style.use() / style.unuse()
                     },
                     {
-                        loader:'css-loader', // interprets @import and url() like import/require() and will resolve them. I think it's about what is inside css-file
+                        loader: 'css-loader', // interprets @import and url() like import/require() and will resolve them. I think it's about what is inside css-file
                         options: {
                             sourceMap: true,
                             modules: true,
@@ -36,13 +36,18 @@ module.exports = {
                         }
                     }
                 ]
-        },
-        {
-            test: /\.(png|svg|jpg|gif)$/,
-            use: [
-                'file-loader'
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: 'images/'
+                        }
+                    }
                 ]
-        }
+            }
         ]
     },
     devServer: {

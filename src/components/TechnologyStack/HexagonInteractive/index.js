@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import style from './index.css';
 
 class Hexagon extends Component {
-    constructor (props) {
-        super (props);
+    constructor(props) {
+        super(props);
         this.state = {}
     }
     // ${this.props.className}
@@ -11,8 +11,8 @@ class Hexagon extends Component {
         const hexClass = `${style.hexagon} ${style[this.props.className]}`
         return (
             <div className={style.root}>
-                <div  className={hexClass}>
-                    {this.props.children} 
+                <div className={hexClass}>
+                    {this.props.children}
                 </div>
                 <span className={style.label}>{this.props.label}</span>
             </div>
