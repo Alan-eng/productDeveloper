@@ -6,6 +6,8 @@ import Projects from "./components/Projects"
 import ParallaxBackground from "./components/ParallaxBackground"
 import Particles from 'react-particles-js';
 import { hot } from 'react-hot-loader'
+import jsIcon from './jsIcon.svg';
+
 import style from './app.css';
 
 const App = () => {

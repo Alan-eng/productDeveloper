@@ -1,4 +1,5 @@
 .sideBar {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +9,17 @@
   width: 200px;
   padding-left: 24px;
   height: 100%;
+}
+
+.sideBar:after {
+  content: '';
+  position: absolute;
+  background-image: url('./designGear.svg');
+  width: 141px;
+  height: 100%;
+  left: 154px;
+  top: 0;
+  z-index: -1;
 }
 
 .sideBarHeader {

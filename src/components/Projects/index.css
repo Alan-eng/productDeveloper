@@ -2,38 +2,79 @@
   display: flex;
 }
 
-.sideBar {
+.container {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  width: 500px;
+  height: 300px;
+}
+
+/* .img {
+  max-width: 100%;
+  height: 400px;
+  object-fit: contain;
+  overflow: hidden;
+} */
+
+.overlay {
   position: absolute;
-  background-color: #181621;
-  width: 200px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
 }
 
-.sideBarHeader {
-  color: #539cff;
-  padding-top: 32px;
-  text-decoration: none;
-}
-
-.sideBarHeader > span:first-child {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding-top: 32px;
-  padding-left: 32px;
+.title {
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 120px;
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
   color: white;
+  z-index: 1;
+  transition: top .5s ease;
 }
 
-.menu li {
-  padding-top: 16px;
+.container:hover .title {
+  top: 90px;
 }
+
+.btn {
+  position: absolute;
+  color: #fff;
+  border: 2px solid #fff;
+  outline: none;
+  padding: 16px 24px;
+  font-size: 1.5rem;
+  top: 180px;
+  text-align: center;
+  opacity: 0;
+  cursor: pointer;
+  background: none;
+  transition: opacity .35s ease;
+}
+
+.container:hover .btn {
+  opacity: 1;
+}
+

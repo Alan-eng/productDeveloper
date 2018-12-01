@@ -1,4 +1,5 @@
 .centerContainer {
+  position: relative;
   max-width: 600px;
   margin: auto;
   font-weight: 300;
@@ -6,23 +7,34 @@
   padding: 24px;
 }
 
-.centerContainer h1,
-h4 {
-  margin: 0;
-  padding-top: 24px;
+.particlesWrapper {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+.centerContainer:before {
+  content: '';
+  position: absolute;
+  background-image: url('./jsReactReduxGear2.svg');
+  width: 73px;
+  height: 100%;
+  left: -72px;
+  z-index: 2;
+  top: 0;
 }
 
 h1,
 h2,
 h3,
 h4 {
+  margin: 0;
+  padding-top: 24px;
   text-align: center;
   color: #539cff;
 }
 
-.particlesWrapper {
-  width: 100%;
-  top: 0;
-  position: absolute;
-  z-index: -1;
+h4 {
+  margin-bottom: 32px;
 }
