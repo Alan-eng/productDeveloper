@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import Close from './Close.svg';
+
 import style from './index.css';
 
 
@@ -10,7 +12,7 @@ const Modal = ({ handleClose, show, children }) => {
         <div className={showHideClassName} onClick={handleClose}>
             <section className={style.modalMain} onClick={(e) => { e.stopPropagation() }}>
                 {children}
-                <button onClick={handleClose}>close</button>
+                <button onClick={handleClose} className={style.closeBtn} />
             </section>
         </div>
     );

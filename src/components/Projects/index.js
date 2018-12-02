@@ -41,8 +41,13 @@ class Projects extends React.Component {
                 </div>
 
                 <Modal show={this.state.modal} handleClose={this.hideModal}>
-                    <p>Modal is opened</p>
-                    <p>Data</p>
+                    <img src={superkassa} className={style.imgInModal} alt="superkassa site" />
+                    <div className={style.contentInModal}>
+                        <h2>Superkassa.ru</h2>
+                        <h4>Airtickets sale</h4>
+
+                        <p>Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.</p>
+                    </div>
                 </Modal>
             </div>
         )

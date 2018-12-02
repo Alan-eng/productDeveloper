@@ -6,8 +6,8 @@
   position: fixed;
   z-index: 2;
   background-color: #181621;
-  width: 200px;
-  padding-left: 24px;
+  width: 250px;
+  padding: 24px;
   height: 100%;
 }
 
@@ -17,14 +17,13 @@
   background-image: url('./designGear.svg');
   width: 141px;
   height: 100%;
-  left: 154px;
+  left: 180px;
   top: 0;
   z-index: -1;
 }
 
 .sideBarHeader {
   color: #539cff;
-  padding-top: 32px;
   text-decoration: none;
 }
 

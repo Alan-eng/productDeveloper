@@ -41,6 +41,24 @@
   height: 100%;
 }
 
+.imgInModal {
+  max-width: 100%;
+}
+
+.contentInModal {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.contentInModal * {
+  text-align: left;
+}
+
+.contentInModal *:nth-child(2) {
+  color: #c0c2ce;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .title {
   position: absolute;
   width: 500px;
