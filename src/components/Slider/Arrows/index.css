@@ -1,0 +1,14 @@
+.rightArrow,
+.leftArrow {
+  background-color: red;
+  top: 0;
+  position: absolute;
+}
+
+.rightArrow {
+  right: 0;
+}
+
+.leftArrow {
+  left: 0;
+}

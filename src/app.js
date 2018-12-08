@@ -5,6 +5,9 @@ import TechnologyStack from "./components/TechnologyStack"
 import Projects from "./components/Projects"
 import ParallaxBackground from "./components/ParallaxBackground"
 import Particles from 'react-particles-js';
+// import Slider from './components/Sliders/Slider'
+import SliderTech from './components/Slider/SliderTech'
+import MySliderTech from './components/MySlider/SliderTech'
 import { hot } from 'react-hot-loader'
 import jsIcon from './jsIcon.svg';
 
@@ -15,6 +18,9 @@ const App = () => {
         <div className={style.root}>
             <SideBar />
             <div className={style.centerContainer}>
+                {/* <Slider /> */}
+                {/* <SliderTech /> */}
+                <MySliderTech />
                 <AboutMe />
                 {/* <ParallaxBackground /> */}
                 <TechnologyStack />
