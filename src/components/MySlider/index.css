@@ -2,4 +2,42 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  background: blue;
+  height: 100px;
+}
+
+.slide {
+  animation: slide 1s ease-in forwards;
+}
+
+.flip {
+  animation: flip 2s ease-out alternate 2;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(80px);
+  }
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
+}
+/* ----------------------------------------- */
+
+.slideElem {
+  transition: all 500ms ease-in-out;
+}
+
+.slideElementering {
 }

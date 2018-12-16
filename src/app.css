@@ -29,6 +29,7 @@ html {
 
 .centerContainer:before {
   content: '';
+  /* animation: move 4s infinite; */
   position: absolute;
   background-image: url('./jsReactReduxGear2.svg');
   width: 73px;
@@ -37,6 +38,16 @@ html {
   z-index: 2;
   top: 0;
 }
+
+/* @keyframes move {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(80px);
+  }
+} */
 
 h1,
 h2,

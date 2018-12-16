@@ -14,9 +14,13 @@ class Slider extends Component {
 
         this.state = {
             images: [...props.images],
-            transitionIn: false,
+            transitionFirstImageIn: true,
+            firstImageIndex: 1,
+            transitionSecondImageIn: false,
+            secondImageIndex: 0,
+            numberOfClicks: 0,
             currentIndex: 0,
-            translateValue: 0,
+            // translateValue: 0,
         }
 
         this.intervalID;
@@ -48,31 +52,48 @@ class Slider extends Component {
     }
 
     goToNextSlide() {
-        if (this.state.currentIndex === this.state.images.length - 1) {
-            return this.setState({
-                transitionIn: true,
-                currentIndex: 0,
-                translateValue: 0
-            })
-        }
+        this.setState((prevState) => {
+            const {
+                transitionFirstImageIn,
+                transitionSecondImageIn,
+                currentIndex,
+                secondImageIndex,
+                firstImageIndex,
+                images,
+                numberOfClicks,
+            } = prevState
 
-        this.setState(prevState => ({
-            currentIndex: prevState.currentIndex + 1,
-            translateValue: prevState.translateValue + -(this.slideWidth())
-        }));
+            if (numberOfClicks % 2 === 0) {
+                return {
+                    numberOfClicks: numberOfClicks + 1,
+                    transitionFirstImageIn: !transitionFirstImageIn,
+                    transitionSecondImageIn: !transitionSecondImageIn,
+                    secondImageIndex: secondImageIndex + 2 > images.length - 1 ? 0 : secondImageIndex + 2,
+                    // translateValue: 0
+                }
+            } else {
+                return {
+                    numberOfClicks: numberOfClicks + 1,
+                    transitionFirstImageIn: !transitionFirstImageIn,
+                    firstImageIndex: firstImageIndex + 2 > images.length - 1 ? 1 : firstImageIndex + 2,
+                    transitionSecondImageIn: !transitionSecondImageIn,
+                    // translateValue: 0
+                }
 
+            }
+        })
     }
 
     goToPrevSlide() {
         if (Math.abs(this.state.currentIndex) === this.state.images.length - 1) {
             return this.setState({
-                currentIndex: 0,
+                transitionIn: false,
                 translateValue: 0
             })
         }
 
         this.setState(prevState => ({
-            currentIndex: prevState.currentIndex - 1,
+            transitionIn: false,
             translateValue: prevState.translateValue + (this.slideWidth())
         }));
 
@@ -83,45 +104,73 @@ class Slider extends Component {
         const {
             images,
             currentIndex,
+            firstImageIndex,
+            secondImageIndex
         } = this.state
 
         const duration = 300;
 
         const defaultStyle = {
-            transition: `opacity ${duration}ms ease-in-out`,
-            opacity: 0.5,
+            transition: `all ${duration}ms linear`,
+            position: 'absolute',
+            opacity: 0,
         }
 
         const transitionStyles = {
-            entering: { opacity: 0 },
-            entered: { opacity: 1 },
+            entering: {
+                transform: `translateX(-60px)`,
+            },
+            entered: {
+                opacity: 1,
+                transform: `translateX(0%)`
+            },
+            exiting: {
+                opacity: 0,
+                transform: `translateX(60px)`
+            },
+            // exited: {
+            //     opacity: 0,
+            //     transform: `translateX(60px)`
+            // }
         };
 
         return (
             <div
-                className={style.slider}
+                className={`${style.slider}`}
                 ref={this.sliderRef}
             >
-                <Transition timeout={300}>
-
-
+                <Transition in={this.state.transitionFirstImageIn} appear timeout={duration}>
                     {(state) => (
-                        <div style={{
-                            ...defaultStyle,
-                            ...transitionStyles[state]
-                        }}>
-                            <img src={images[currentIndex]} />
-                        </div>
+                        <img
+                            style={{
+                                ...defaultStyle,
+                                ...transitionStyles[state]
+                            }}
+                            src={images[firstImageIndex]}
+                        />
                     )}
                 </Transition>
-                {currentIndex > 0 ?
-                    <LeftArrow
-                        goToPrevSlide={this.goToPrevSlide}
-                    /> : null}
+                <Transition in={this.state.transitionSecondImageIn} appear timeout={duration}>
+                    {(state) => (
+                        <img
+                            style={{
+                                ...defaultStyle,
+                                ...transitionStyles[state]
+                            }}
+                            src={images[secondImageIndex]}
+                        />
+                    )}
+                </Transition>
+                {
+                    currentIndex > 0 ?
+                        <LeftArrow
+                            goToPrevSlide={this.goToPrevSlide}
+                        /> : null
+                }
                 <RightArrow
                     goToNextSlide={this.goToNextSlide}
                 />
-            </div>
+            </div >
         );
     }
 };

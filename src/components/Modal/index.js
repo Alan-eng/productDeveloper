@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import Close from './Close.svg';
+// import Close from './close.svg';
 
 import style from './index.css';
 
