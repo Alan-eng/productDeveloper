@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
+const postcssCustomMedia = require('postcss-custom-media');
 
 const htmlPlugin = new HtmlWebPackPlugin({
     template: "./src/index.html",
@@ -34,6 +35,20 @@ module.exports = {
                             modules: true,
                             localIdentName: "[local]___[hash:base64:5]"
                         }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        // options: {
+                        //     ident: 'postcss',
+                        //     plugins: () => [
+                        //     postcssCustomMedia(
+                        //         /* pluginOptions */
+                        //         {
+                        //             importFrom: './src/themes/variables.css' // => @custom-selector --small-viewport (max-width: 30em);
+                        //         }
+                        //         )
+                        //     ],
+                        // }
                     }
                 ]
             },

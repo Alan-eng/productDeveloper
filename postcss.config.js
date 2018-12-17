@@ -1,10 +1,13 @@
+const postcssCustomMedia = require('postcss-custom-media');
+
 module.exports = (ctx) => ({
     parser: ctx.parser ? 'sugarss' : false,
     map: ctx.env === 'development' ? ctx.map : false,
     plugins: {
       'postcss-import': {},
       'postcss-preset-env': {},
-        cssnano: ctx.env === 'production' ? {} : false
+      cssnano: ctx.env === 'production' ? {} : false,
+    'postcss-custom-media': postcssCustomMedia(/* pluginOptions */),
     }
   })
 

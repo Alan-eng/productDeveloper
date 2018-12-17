@@ -1,3 +1,5 @@
+@import '../../themes/variables.css';
+
 .sideBar {
   position: relative;
   display: flex;
@@ -9,6 +11,12 @@
   width: 250px;
   padding: 24px;
   height: 100%;
+}
+
+@media (--only-mobile-screen) {
+    .sideBar {
+        display: none;
+    }
 }
 
 .sideBar:after {
