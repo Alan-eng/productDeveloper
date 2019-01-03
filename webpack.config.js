@@ -1,6 +1,7 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 const postcssCustomMedia = require('postcss-custom-media');
+var path = require('path');
 
 const htmlPlugin = new HtmlWebPackPlugin({
     template: "./src/index.html",
@@ -9,6 +10,10 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 module.exports = {
     entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, './dist'), // without output webpack livereload doesn't work
+        filename: 'index_bundle.js'
+    },
     module: {
         rules: [
             {
@@ -66,7 +71,8 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: './dist',
+        // contentBase: path.join(__dirname, 'dist'),
+        contentBase: false,
         hot: true
     },
     plugins: [

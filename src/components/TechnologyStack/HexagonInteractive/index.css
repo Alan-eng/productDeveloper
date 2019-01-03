@@ -3,10 +3,9 @@
   align-items: center;
 }
 
-.label {
-  padding-left: 16px;
-  color: #d8d8d8;
-  line-height: 40px;
+.labelContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 /* .label:nth-child(even) {
@@ -95,6 +94,11 @@
   color: #6d44b3;
   background-color: #08003f;
   border-color: #6d44b3;
+}
+
+.hexagonNodeJS {
+  background-color: #fff;
+  border-color: #085506;
 }
 
 .hexagonPostCSS {

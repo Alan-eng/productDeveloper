@@ -9,6 +9,7 @@
 
 .frontendStack,
 .designStack {
+  min-width: 200px;
   display: flex;
   flex-direction: column;
 }
@@ -19,4 +20,42 @@
 
 .designStack div:nth-child(even) {
   margin-left: 36px;
+}
+
+/* ------------------------------Animation------------------------ */
+
+.label {
+  color: #d8d8d8;
+  line-height: 24px;
+}
+
+.typeAnimation {
+  font-size: 12px;
+  display: inline-block;
+  position: relative;
+  animation: type 3s steps(9) infinite alternate;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Oxygen Mono', monospace;
+  /* border-right: 4px solid white; */
+}
+
+.typeAnimation:before {
+  animation: opacity 0.8s steps(2) infinite;
+  content: '';
+  position: absolute;
+  right: -2px;
+  height: 100%;
+  width: 5px;
+  border-right: 4px solid white;
+}
+
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+
+  50% {
+    width: 9ch;
+  }
 }

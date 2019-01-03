@@ -24,7 +24,6 @@ const App = () => {
                 <AboutMe />
                 {/* <ParallaxBackground /> */}
                 <TechnologyStack />
-                {/* <ParallaxBackground /> */}
                 <Projects />
             </div>
             <Particles

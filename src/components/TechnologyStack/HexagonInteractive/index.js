@@ -6,15 +6,18 @@ class Hexagon extends Component {
         super(props);
         this.state = {}
     }
-    // ${this.props.className}
+
     render() {
-        const hexClass = `${style.hexagon} ${style[this.props.className]}`
+        const hexClass = `${style.hexagon} ${style[this.props.className]} `
         return (
             <div className={style.root}>
                 <div className={hexClass}>
                     {this.props.children}
                 </div>
-                <span className={style.label}>{this.props.label}</span>
+                <div className={style.labelContainer}>
+                    {this.props.labelStatic}
+                    {this.props.label}
+                </div>
             </div>
         )
     }
