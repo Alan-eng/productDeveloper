@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   background-color: #181621;
   width: 250px;
   padding: 24px;
@@ -14,9 +14,9 @@
 }
 
 @media (--only-mobile-screen) {
-    .sideBar {
-        display: none;
-    }
+  .sideBar {
+    display: none;
+  }
 }
 
 .sideBar:after {
@@ -47,10 +47,16 @@
   margin: 0;
   padding: 0;
   padding-top: 32px;
-  padding-left: 32px;
   color: white;
 }
 
-.menu li {
-  padding-top: 16px;
+.link,
+.activeLink {
+  padding-top: 24px;
+  text-decoration: none;
+  color: #a364b7;
+}
+
+.activeLink {
+  color: #539cff;
 }

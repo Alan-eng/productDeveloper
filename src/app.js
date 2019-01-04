@@ -1,6 +1,6 @@
 import React from "react";
-import SideBar from "./components/sideBar"
-import AboutMe from "./components/aboutMe"
+import SideBar from "./components/SideBar"
+import AboutMe from "./components/AboutMe"
 import TechnologyStack from "./components/TechnologyStack"
 import Projects from "./components/Projects"
 import ParallaxBackground from "./components/ParallaxBackground"
@@ -22,7 +22,6 @@ const App = () => {
                 {/* <SliderTech /> */}
                 <MySliderTech />
                 <AboutMe />
-                {/* <ParallaxBackground /> */}
                 <TechnologyStack />
                 <Projects />
             </div>

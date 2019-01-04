@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ScrollableAnchor from "react-scrollable-anchor"
 import Hexagon from './HexagonInteractive'
 import react from './images/react.svg';
 import redux from './images/redux.svg';
@@ -42,7 +43,9 @@ class TechnologyStack extends Component {
         const animatedLabel = this.state.animatedLabel;
         return (
             <div className={style.root} key={'myTechnologyStack'}>
-                <h2>Front-end Developer</h2>
+                <ScrollableAnchor id={'technologies'}>
+                    <h2>Front-end Developer</h2>
+                </ScrollableAnchor>
                 <div className={style.columnContainer}>
                     <div className={style.frontendStack}>
                         <h4>Technology stack</h4>

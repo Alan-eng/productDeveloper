@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import ScrollableAnchor from "react-scrollable-anchor"
 import Modal from '../Modal';
 import superkassa from './superkassa.jpg';
 import style from './index.css';
 
-class Projects extends React.Component {
+class Projects extends Component {
     constructor(props) {
         super(props);
         this.state = { modal: false };
@@ -22,8 +23,10 @@ class Projects extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>My recent Projects</h1>
+            <Fragment >
+                <ScrollableAnchor id={'projects'}>
+                    <h1>My recent Projects</h1>
+                </ScrollableAnchor>
                 <h4>I design and code beautifully simple things, and I love what I do.</h4>
                 <div className={style.root}>
                     <div className={style.container}>
@@ -49,7 +52,7 @@ class Projects extends React.Component {
                         <p>Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.</p>
                     </div>
                 </Modal>
-            </div>
+            </Fragment>
         )
     }
 };
