@@ -54,7 +54,12 @@
 .activeLink {
   padding-top: 24px;
   text-decoration: none;
-  color: #a364b7;
+  /* color: #a364b7; */
+  color: #2369c7;
+}
+
+.link:hover {
+  color: #539cff;
 }
 
 .activeLink {

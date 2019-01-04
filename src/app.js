@@ -1,6 +1,7 @@
 import React from "react";
-import SideBar from "./components/SideBar"
-import AboutMe from "./components/AboutMe"
+import { AboutMe, SideBar } from './components'
+// import SideBar from "./components/SideBar"
+// import AboutMe from "./components/AboutMe"
 import TechnologyStack from "./components/TechnologyStack"
 import Projects from "./components/Projects"
 import ParallaxBackground from "./components/ParallaxBackground"
