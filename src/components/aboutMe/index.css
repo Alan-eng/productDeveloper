@@ -1,3 +1,5 @@
+@import '../../themes/variables.css';
+
 .root {
   display: flex;
   margin-bottom: 32px;

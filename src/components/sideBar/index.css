@@ -32,6 +32,12 @@
   z-index: -1;
 }
 
+/* @media (max-width: 1024px) {
+  .sideBar:after {
+    display: none;
+  }
+} */
+
 .sideBarTitle {
   color: #539cff;
   max-width: 200px;

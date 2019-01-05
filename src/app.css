@@ -1,4 +1,6 @@
 @import url("normalize.css");
+@import './themes/variables.css';
+
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -9,6 +11,9 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+.root {
 }
 
 .root:before {
@@ -53,6 +58,17 @@ html {
   z-index: 2;
   top: 0;
 }
+
+@media (--only-tablet-screen) {
+  .centerContainer:before {
+    display: none;
+  }
+
+  .centerContainer {
+    left: 250px;
+  }
+}
+
 
 /* @keyframes move {
   0% {
