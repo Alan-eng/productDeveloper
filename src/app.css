@@ -32,6 +32,7 @@ html {
   font-weight: 300;
   background-color: #181621;
   padding: 24px;
+  line-height: initial;
 }
 
 .particlesWrapper {

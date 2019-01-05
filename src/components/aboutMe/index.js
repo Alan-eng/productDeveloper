@@ -7,12 +7,11 @@ const AboutMe = () => {
 
     return (
         <div>
-            {/* <h1>Front-end Developer, Designer</h1> */}
             <ScrollableAnchor id={'aboutMe'}>
                 <h1 className={style.header}>Front-end &nbsp; <span className={style.headerAnimation}> Developer</span></h1>
             </ScrollableAnchor>
 
-            <h4>I design and code beautifully simple things, and I love what I do.</h4>
+            <h4 className={style.headerChild}>I design and code beautifully simple things, and I love what I do.</h4>
             <div className={style.root}>
                 <img src={Alan} className="portrait" alt="portrait" />
                 <article className={style.menu}>

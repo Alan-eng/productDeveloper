@@ -8,8 +8,10 @@
   position: fixed;
   z-index: 1;
   background-color: #181621;
-  width: 250px;
-  padding: 24px;
+  width: 310px;
+  padding-right: 12px;
+  padding-left: 60px;
+  padding-top: 60px;
   height: 100%;
 }
 
@@ -25,18 +27,22 @@
   background-image: url('./designGear.svg');
   width: 141px;
   height: 100%;
-  left: 180px;
+  left: 240px;
   top: 0;
   z-index: -1;
 }
 
-.sideBarHeader {
+.sideBarTitle {
   color: #539cff;
-  text-decoration: none;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 16px;
 }
 
-.sideBarHeader > span:first-child {
-  font-size: 3rem;
+.sideBarHeader {
+  font-size: 32px;
   font-weight: 500;
 }
 
@@ -46,7 +52,8 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-top: 32px;
+  padding-top: 80px;
+  line-height: 32px;
   color: white;
 }
 
@@ -54,7 +61,6 @@
 .activeLink {
   padding-top: 24px;
   text-decoration: none;
-  /* color: #a364b7; */
   color: #2369c7;
 }
 
@@ -64,4 +70,17 @@
 
 .activeLink {
   color: #539cff;
+}
+
+.menuBtn {
+  position: absolute;
+  top: 64px;
+  right: -120px;
+  font-size: 24px;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: #539cff;
+  z-index: 1;
 }
