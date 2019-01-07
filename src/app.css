@@ -31,6 +31,7 @@ html {
 
 .centerContainer {
   position: relative;
+  left: 73px;
   z-index: 1;
   max-width: 650px;
   margin: auto;
@@ -59,15 +60,26 @@ html {
   top: 0;
 }
 
-@media (--only-tablet-screen) {
-  .centerContainer:before {
-    display: none;
-  }
-
+@media (--only-desktop-small-screen) {
   .centerContainer {
-    left: 250px;
+    left: 200px;
   }
 }
+
+@media (--only-tablet-screen) {
+  .centerContainer {
+    left: 73px;
+  }
+}
+
+@media (--only-mobile-screen) {
+  .centerContainer {
+    left: 0;
+    margin-left: 66px;
+  }
+}
+
+
 
 
 /* @keyframes move {

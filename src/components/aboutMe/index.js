@@ -13,7 +13,7 @@ const AboutMe = () => {
 
             <h4 className={style.headerChild}>I design and code beautifully simple things, and I love what I do.</h4>
             <div className={style.root}>
-                <img src={Alan} className="portrait" alt="portrait" />
+                <img src={Alan} alt="portrait" />
                 <article className={style.menu}>
                     Hi, I’m Alan. Nice to meet you. <br />
 

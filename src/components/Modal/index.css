@@ -1,3 +1,5 @@
+@import '../../themes/variables.css';
+
 .modal {
   position: fixed;
   z-index: 100;
@@ -8,6 +10,13 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
+@media (--only-mobile-screen), (--only-tablet-screen) {
+  .modal {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
 .modalMain {
   position: relative;
   display: flex;
@@ -15,11 +24,25 @@
   align-items: center;
   background: white;
   border-radius: 2px;
-  width: 800px;
+  width: 50%;
+  min-width: 600px;
+  max-width: 800px;
   height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (--only-mobile-screen), (--only-tablet-screen) {
+  .modalMain {
+    width: 100%;
+    min-width: initial;
+  }
+}
+
+.modalMain img {
+  object-fit: cover;
+  max-width: 100%;
 }
 
 .closeBtn {

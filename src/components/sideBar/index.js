@@ -59,67 +59,82 @@ class SideBar extends Component {
 
 
         return (
-            <Transition in={this.state.menuIsOpen} appear timeout={duration}>
-                {(state) => (
-                    <nav
-                        style={{
-                            ...defaultStyle,
-                            ...transitionStyles[state]
-                        }}
-                        className={style.sideBar}
-                    >
-                        <button
-                            onClick={this.openCloseMenu}
-                            className={style.menuBtn}
+            <Fragment>
+                <Transition in={this.state.menuIsOpen} appear timeout={duration}>
+                    {(state) => (
+                        <nav
+                            style={{
+                                ...defaultStyle,
+                                ...transitionStyles[state]
+                            }}
+                            className={style.sideBar}
                         >
-                            {this.state.menuIsOpen ?
-                                <FaTimes /> :
-                                <FaBars />
-                            }
-                        </button>
-                        <div className={style.sideBarTitle}>
-                            <h1 className={style.sideBarHeader}>Alan Betanov</h1> <br />
-                            <small>(Frontend developer)</small>
-                        </div>
-                        <ul className={style.sideBarMenu}>
-                            <li>
-                                <a
-                                    onClick={() => this.setActiveLink('aboutMe')}
-                                    className={this.state.activeLink === 'aboutMe' ? style.activeLink : style.link}
-                                    href='#aboutMe'>
-                                    <FaBeer /> &nbsp; About Me
+                            <button
+                                onClick={this.openCloseMenu}
+                                className={style.menuBtn}
+                            >
+                                {this.state.menuIsOpen ?
+                                    <FaTimes /> :
+                                    <FaBars />
+                                }
+                            </button>
+                            <div className={style.sideBarTitle}>
+                                <h1 className={style.sideBarHeader}>Alan Betanov</h1> <br />
+                                <small>(Frontend developer)</small>
+                            </div>
+                            <ul className={style.sideBarMenu}>
+                                <li>
+                                    <a
+                                        onClick={() => this.setActiveLink('aboutMe')}
+                                        className={this.state.activeLink === 'aboutMe' ? style.activeLink : style.link}
+                                        href='#aboutMe'>
+                                        <FaBeer /> &nbsp; About Me
                                 </a>
-                            </li>
-                            <li>
-                                <a
-                                    onClick={() => this.setActiveLink('technologies')}
-                                    className={this.state.activeLink === 'technologies' ? style.activeLink : style.link}
-                                    href='#technologies'
-                                >
-                                    <FaHammer /> &nbsp; Technologies
+                                </li>
+                                <li>
+                                    <a
+                                        onClick={() => this.setActiveLink('technologies')}
+                                        className={this.state.activeLink === 'technologies' ? style.activeLink : style.link}
+                                        href='#technologies'
+                                    >
+                                        <FaHammer /> &nbsp; Technologies
                                 </a>
-                            </li>
-                            <li>
-                                <a
-                                    onClick={() => this.setActiveLink('projects')}
-                                    className={this.state.activeLink === 'projects' ? style.activeLink : style.link}
-                                    href='#projects'
-                                >
-                                    <FaHandsHelping /> &nbsp; Projects
+                                </li>
+                                <li>
+                                    <a
+                                        onClick={() => this.setActiveLink('projects')}
+                                        className={this.state.activeLink === 'projects' ? style.activeLink : style.link}
+                                        href='#projects'
+                                    >
+                                        <FaHandsHelping /> &nbsp; Projects
                                 </a>
-                            </li>
-                            <li>
-                                <a
-                                    onClick={() => this.setActiveLink('contacts')}
-                                    className={this.state.activeLink === 'contacts' ? style.activeLink : style.link}
-                                    href='#contacts'
-                                >
-                                    <FaPenAlt /> &nbsp; Contacts
+                                </li>
+                                <li>
+                                    <a
+                                        onClick={() => this.setActiveLink('contacts')}
+                                        className={this.state.activeLink === 'contacts' ? style.activeLink : style.link}
+                                        href='#contacts'
+                                    >
+                                        <FaPenAlt /> &nbsp; Contacts
                                 </a>
-                            </li>
-                        </ul>
-                    </nav>)}
-            </Transition>
+                                </li>
+                            </ul>
+
+                        </nav>)}
+                </Transition>
+                <nav className={style.sideBarMenuTop}>
+                    <button
+                        onClick={this.openCloseMenu}
+                        className={style.btnWithIcon}
+                    >
+                        {this.state.menuIsOpen ?
+                            <Fragment><FaTimes /> &nbsp;Close Menu </Fragment> :
+                            <Fragment><FaBars /> &nbsp;Open Menu </Fragment>
+                        }
+                    </button>
+                    <span>Alan Betanov <small>(Frontend developer)</small></span>
+                </nav>
+            </Fragment>
         )
     }
 };

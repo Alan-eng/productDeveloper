@@ -28,13 +28,12 @@ class Projects extends Component {
                     <h1>My recent Projects</h1>
                 </ScrollableAnchor>
                 <h4>I design and code beautifully simple things, and I love what I do.</h4>
-                <div className={style.root}>
-                    <div className={style.container}>
-                        <img src={superkassa} className={style.img} alt="superkassa site" />
-                        <p className={style.title}>card title</p>
-                        <div className={style.overlay}></div>
+                <div className={style.card}>
+                    <img src={superkassa} className={style.projectImg} alt="superkassa site" />
+                    <p className={style.titleCard}>card title</p>
+                    <div className={style.overlay}>
                         <button
-                            className={style.btn}
+                            className={style.btnCard}
                             type="button"
                             onClick={this.showModal}
                         >

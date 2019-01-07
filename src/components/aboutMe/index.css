@@ -10,6 +10,13 @@
   object-fit: cover;
 }
 
+@media (--only-mobile-screen) {
+  .root img {
+    max-width: 250px;
+    max-height: 500px;
+  }
+}
+
 .header {
   display: flex;
   justify-content: center;
