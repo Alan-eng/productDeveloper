@@ -148,8 +148,26 @@
 .btnWithIcon {
   display: flex;
   align-content: center;
+  align-items: center;
   background: none;
   border: none;
   outline: none;
   color: inherit;
+}
+
+.closeMenu::after {
+  content: 'Close Menu';
+  padding-left: 8px;
+}
+
+.openMenu::after {
+  content: 'Open Menu';
+  padding-left: 8px;
+}
+
+@media (--only-small-mobile-screen) {
+  .closeMenu::after,
+  .openMenu::after {
+    content: '';
+  }
 }

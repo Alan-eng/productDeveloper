@@ -135,11 +135,11 @@ class SideBar extends Component {
                 <nav className={style.sideBarMenuTop}>
                     <button
                         onClick={this.openCloseMenu}
-                        className={style.btnWithIcon}
+                        className={`${style.btnWithIcon} ${this.state.menuIsOpen ? style.closeMenu : style.openMenu}`}
                     >
                         {this.state.menuIsOpen ?
-                            <Fragment><FaTimes /> &nbsp;Close Menu </Fragment> :
-                            <Fragment><FaBars /> &nbsp;Open Menu </Fragment>
+                            <FaTimes /> :
+                            <FaBars />
                         }
                     </button>
                     <span>Alan Betanov <small>(Frontend developer)</small></span>

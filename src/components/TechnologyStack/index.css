@@ -4,9 +4,36 @@
   margin-bottom: 40px;
 }
 
+.header {
+  font-size: 32px;
+}
+
+.headerSmall {
+  font-size: 24px;
+}
+
+@media (--only-mobile-screen) {
+  .header {
+    font-size: 24px;
+  }
+
+  .headerSmall {
+    font-size: 22px;
+    text-align: left;
+    padding-left: 18%;
+  }
+}
+
+@media (--only-small-mobile-screen) {
+  .headerSmall {
+    padding-left: 32%;
+  }
+}
+
 .columnContainer {
   display: flex;
   justify-content: space-around;
+  margin-top: 24px;
 }
 
 @media (--only-mobile-screen) {
@@ -41,6 +68,12 @@
 
 .designStack div:nth-child(even) {
   margin-left: 36px;
+}
+
+@media (--only-mobile-screen) {
+  .designStack {
+    margin-top: 60px;
+  }
 }
 
 /* ------------------------------Animation------------------------ */

@@ -25,9 +25,9 @@ class Projects extends Component {
         return (
             <Fragment >
                 <ScrollableAnchor id={'projects'}>
-                    <h1>My recent Projects</h1>
+                    <h1 className={style.header}>My recent Projects</h1>
                 </ScrollableAnchor>
-                <h4>I design and code beautifully simple things, and I love what I do.</h4>
+                <h4 className={style.headerSmall}>I design and code beautifully simple things, and I love what I do.</h4>
                 <div className={style.card}>
                     <img src={superkassa} className={style.projectImg} alt="superkassa site" />
                     <p className={style.titleCard}>card title</p>

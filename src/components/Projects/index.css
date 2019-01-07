@@ -1,3 +1,24 @@
+@import '../../themes/variables.css';
+
+.header {
+  font-size: 32px;
+}
+
+.headerSmall {
+  font-size: 24px;
+}
+
+@media (--only-mobile-screen) {
+  .header {
+    font-size: 24px;
+  }
+
+  .headerSmall {
+    margin-top: 24px;
+    font-size: 20px;
+  }
+}
+
 .card {
   display: inline-block;
   position: relative;
@@ -27,7 +48,7 @@
   position: absolute;
   width: 100%;
   left: 0;
-  top: 120px;
+  top: 20%;
   font-weight: 700;
   font-size: 30px;
   text-align: center;
@@ -39,7 +60,7 @@
 }
 
 .card:hover .titleCard {
-  top: 90px;
+  top: 8%;
   opacity: 1;
 }
 
@@ -50,7 +71,7 @@
   outline: none;
   padding: 16px 24px;
   font-size: 1.5rem;
-  top: 180px;
+  top: 50%;
   text-align: center;
   opacity: 0;
   cursor: pointer;
