@@ -29,6 +29,8 @@ class SideBar extends Component {
     }
 
 
+
+
     render() {
 
         const duration = 300;
@@ -60,6 +62,14 @@ class SideBar extends Component {
 
         return (
             <Fragment>
+                {this.state.menuIsOpen ?
+                    <div
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            this.openCloseMenu();
+                        }}
+                        className={style.cover}></div> :
+                    null}
                 <Transition in={this.state.menuIsOpen} appear timeout={duration}>
                     {(state) => (
                         <nav

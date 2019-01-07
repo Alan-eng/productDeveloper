@@ -12,6 +12,19 @@
 @media (--only-mobile-screen) {
   .columnContainer {
     flex-direction: column;
+    padding-left: 30%;
+  }
+}
+
+@media (--only-small-mobile-screen) {
+  .columnContainer {
+    padding-left: 10%;
+  }
+}
+
+@media (--only-very-small-mobile-screen) {
+  .columnContainer {
+    padding-left: 0;
   }
 }
 

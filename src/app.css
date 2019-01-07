@@ -41,6 +41,12 @@ html {
   line-height: initial;
 }
 
+/* @media (--only-mobile-screen), (--only-tablet-screen) {
+  .colorFilter {
+    filter: brightness(20%);
+  }
+} */
+
 .particlesWrapper {
   width: 100%;
   top: 0;
@@ -75,10 +81,25 @@ html {
 @media (--only-mobile-screen) {
   .centerContainer {
     left: 0;
-    margin-left: 66px;
+    margin-left: 50px;
+  }
+
+  .centerContainer:before {
+    background-size: 100px;
+    width: 50px;
+    left: -50px;
   }
 }
 
+@media (--only-very-small-mobile-screen) {
+  .centerContainer {
+    margin-left: 0;
+  }
+
+  .centerContainer:before {
+    display: none;
+  }
+}
 
 
 

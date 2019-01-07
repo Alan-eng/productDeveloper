@@ -18,7 +18,7 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            windowWidth: null
+            windowWidth: null,
         }
 
         this.updateDimensions = this.updateDimensions.bind(this);

@@ -8,12 +8,19 @@
 .root img {
   border-radius: 4px;
   object-fit: cover;
+  width: 50%;
 }
 
 @media (--only-mobile-screen) {
+  .root {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .root img {
+    width: 100%;
     max-width: 250px;
-    max-height: 500px;
+    max-height: 380px;
   }
 }
 
@@ -74,4 +81,11 @@
   padding-left: 32px;
   color: white;
   line-height: 28px;
+}
+
+@media (--only-mobile-screen) {
+  .menu {
+    margin-top: 28px;
+    padding-left: 12px;
+  }
 }
