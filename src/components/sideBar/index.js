@@ -61,7 +61,7 @@ class SideBar extends Component {
         return (
             <Transition in={this.state.menuIsOpen} appear timeout={duration}>
                 {(state) => (
-                    <div
+                    <nav
                         style={{
                             ...defaultStyle,
                             ...transitionStyles[state]
@@ -81,36 +81,44 @@ class SideBar extends Component {
                             <h1 className={style.sideBarHeader}>Alan Betanov</h1> <br />
                             <small>(Frontend developer)</small>
                         </div>
-                        <ul className={style.menu}>
-                            <a
-                                onClick={() => this.setActiveLink('aboutMe')}
-                                className={this.state.activeLink === 'aboutMe' ? style.activeLink : style.link}
-                                href='#aboutMe'>
-                                <FaBeer /> &nbsp; About Me
+                        <ul className={style.sideBarMenu}>
+                            <li>
+                                <a
+                                    onClick={() => this.setActiveLink('aboutMe')}
+                                    className={this.state.activeLink === 'aboutMe' ? style.activeLink : style.link}
+                                    href='#aboutMe'>
+                                    <FaBeer /> &nbsp; About Me
                                 </a>
-                            <a
-                                onClick={() => this.setActiveLink('technologies')}
-                                className={this.state.activeLink === 'technologies' ? style.activeLink : style.link}
-                                href='#technologies'
-                            >
-                                <FaHammer /> &nbsp; Technologies
+                            </li>
+                            <li>
+                                <a
+                                    onClick={() => this.setActiveLink('technologies')}
+                                    className={this.state.activeLink === 'technologies' ? style.activeLink : style.link}
+                                    href='#technologies'
+                                >
+                                    <FaHammer /> &nbsp; Technologies
                                 </a>
-                            <a
-                                onClick={() => this.setActiveLink('projects')}
-                                className={this.state.activeLink === 'projects' ? style.activeLink : style.link}
-                                href='#projects'
-                            >
-                                <FaHandsHelping /> &nbsp; Projects
+                            </li>
+                            <li>
+                                <a
+                                    onClick={() => this.setActiveLink('projects')}
+                                    className={this.state.activeLink === 'projects' ? style.activeLink : style.link}
+                                    href='#projects'
+                                >
+                                    <FaHandsHelping /> &nbsp; Projects
                                 </a>
-                            <a
-                                onClick={() => this.setActiveLink('contacts')}
-                                className={this.state.activeLink === 'contacts' ? style.activeLink : style.link}
-                                href='#contacts'
-                            >
-                                <FaPenAlt /> &nbsp; Contacts
+                            </li>
+                            <li>
+                                <a
+                                    onClick={() => this.setActiveLink('contacts')}
+                                    className={this.state.activeLink === 'contacts' ? style.activeLink : style.link}
+                                    href='#contacts'
+                                >
+                                    <FaPenAlt /> &nbsp; Contacts
                                 </a>
+                            </li>
                         </ul>
-                    </div>)}
+                    </nav>)}
             </Transition>
         )
     }
