@@ -77,7 +77,6 @@ class Slider extends Component {
     }
 
     render() {
-        console.log('this.sliderRef', this.sliderRef.current)
         return (
             <div
                 className={style.slider}

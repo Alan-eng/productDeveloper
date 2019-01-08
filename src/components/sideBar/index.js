@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { FaBeer, FaPenAlt, FaHandsHelping, FaHammer, FaBars, FaTimes } from 'react-icons/fa';
+import { FaBeer, FaPenAlt, FaHandsHelping, FaHammer, FaBars, FaTimes, FaBehance, FaGithub } from 'react-icons/fa';
 import Transition from 'react-transition-group/Transition';
 
 import style from './index.css';
@@ -92,44 +92,57 @@ class SideBar extends Component {
                                 <h1 className={style.sideBarHeader}>Alan Betanov</h1> <br />
                                 <small>(Frontend developer)</small>
                             </div>
-                            <ul className={style.sideBarMenu}>
-                                <li>
-                                    <a
-                                        onClick={() => this.setActiveLink('aboutMe')}
-                                        className={this.state.activeLink === 'aboutMe' ? style.activeLink : style.link}
-                                        href='#aboutMe'>
-                                        <FaBeer /> &nbsp; About Me
+                            <div className={style.sideBarVerticalContainer}>
+                                <ul className={style.sideBarMenu}>
+                                    <li>
+                                        <a
+                                            onClick={() => this.setActiveLink('aboutMe')}
+                                            className={this.state.activeLink === 'aboutMe' ? style.activeLink : style.link}
+                                            href='#aboutMe'>
+                                            <FaBeer /> &nbsp; About Me
                                 </a>
-                                </li>
-                                <li>
-                                    <a
-                                        onClick={() => this.setActiveLink('technologies')}
-                                        className={this.state.activeLink === 'technologies' ? style.activeLink : style.link}
-                                        href='#technologies'
-                                    >
-                                        <FaHammer /> &nbsp; Technologies
+                                    </li>
+                                    <li>
+                                        <a
+                                            onClick={() => this.setActiveLink('technologies')}
+                                            className={this.state.activeLink === 'technologies' ? style.activeLink : style.link}
+                                            href='#technologies'
+                                        >
+                                            <FaHammer /> &nbsp; Technologies
                                 </a>
-                                </li>
-                                <li>
-                                    <a
-                                        onClick={() => this.setActiveLink('projects')}
-                                        className={this.state.activeLink === 'projects' ? style.activeLink : style.link}
-                                        href='#projects'
-                                    >
-                                        <FaHandsHelping /> &nbsp; Projects
+                                    </li>
+                                    <li>
+                                        <a
+                                            onClick={() => this.setActiveLink('projects')}
+                                            className={this.state.activeLink === 'projects' ? style.activeLink : style.link}
+                                            href='#projects'
+                                        >
+                                            <FaHandsHelping /> &nbsp; Projects
                                 </a>
-                                </li>
-                                <li>
-                                    <a
-                                        onClick={() => this.setActiveLink('contacts')}
-                                        className={this.state.activeLink === 'contacts' ? style.activeLink : style.link}
-                                        href='#contacts'
-                                    >
-                                        <FaPenAlt /> &nbsp; Contacts
+                                    </li>
+                                    <li>
+                                        <a
+                                            onClick={() => this.setActiveLink('contacts')}
+                                            className={this.state.activeLink === 'contacts' ? style.activeLink : style.link}
+                                            href='#contacts'
+                                        >
+                                            <FaPenAlt /> &nbsp; Contacts
                                 </a>
-                                </li>
-                            </ul>
-
+                                    </li>
+                                </ul>
+                                <ul className={style.linksToOtherResourses}>
+                                    <li>
+                                        <a className={style.link} href='https://www.behance.net/Alan-eng' target='_blank'>
+                                            <FaBehance />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a className={style.link} href='https://github.com/Alan-eng/' target='_blank'>
+                                            <FaGithub />
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </nav>)}
                 </Transition>
                 <nav className={style.sideBarMenuTop}>

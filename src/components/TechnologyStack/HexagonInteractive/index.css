@@ -59,8 +59,12 @@
   border-right: none;
 }
 
+.hover {
+  filter: hue-rotate(120deg);
+}
+
 .hexagon:hover {
-  background-color: blue;
+  filter: hue-rotate(120deg);
 }
 
 .hexagon * {

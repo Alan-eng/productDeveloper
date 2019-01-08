@@ -16,27 +16,47 @@ class TechnologyStack extends Component {
 
         this.state = {
             animatedLabel: 'JS',
-            // animatedLabels: ['JS', 'HTML+CSS', 'React', 'Redux', 'Redux-Saga', 'NodeJS', 'PostCSS', 'Webpack'],
         }
 
         this.intervalID;
         this.animatedLabels = ['JS', 'HTML+CSS', 'React', 'Redux', 'Redux-Saga', 'NodeJS', 'PostCSS', 'Webpack'];
+        this.setInterval = this.setInterval.bind(this);
+        this.clearInterval = this.clearInterval.bind(this);
+        this.setLabel = this.setLabel.bind(this);
     }
 
     componentDidMount() {
-        const animatedLabels = this.animatedLabels;
+        this.setInterval()
+    }
+
+    componentWillUnmount() {
+        this.clearInterval();
+    }
+
+    setInterval() {
         this.intervalID = setInterval(
-            () => this.setState({
-                animatedLabel: animatedLabels[Math.floor(Math.random() * animatedLabels.length)]
-            }),
+            () => {
+                const calcNewLabel = () => this.animatedLabels[Math.floor(Math.random() * this.animatedLabels.length)];
+                let newLabel = calcNewLabel();
+                while (newLabel === this.state.animatedLabel) {
+                    newLabel = calcNewLabel();
+                }
+                this.setState({
+                    animatedLabel: newLabel
+                })
+            },
             3000
         );
     }
 
-    componentWillUnmount() {
-        if (this.props.infinite === true) {
-            clearInterval(this.intervalID);
-        }
+    clearInterval() {
+        clearInterval(this.intervalID);
+    }
+
+    setLabel(label) {
+        this.setState({
+            animatedLabel: label
+        })
     }
 
     render() {
@@ -52,8 +72,16 @@ class TechnologyStack extends Component {
                         <Hexagon
                             key={'frontendStackHexagon1'}
                             className="hexagonJS"
+                            isActive={animatedLabel === 'JS' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('JS');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     Java Script
                                 </span>
                             }
@@ -69,15 +97,23 @@ class TechnologyStack extends Component {
                         <Hexagon
                             key={'frontendStackHexagon2'}
                             className="hexagonHTMLCSS"
+                            isActive={animatedLabel === 'HTML+CSS' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('HTML+CSS');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     HTML + CSS
                                 </span>
                             }
                             label={
                                 animatedLabel === 'HTML+CSS' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        HTML + CSS
+                                        responsive layouts
                                     </span> : null
                             }
                         >
@@ -86,8 +122,16 @@ class TechnologyStack extends Component {
                         <Hexagon
                             key={'frontendStackHexagon3'}
                             className="hexagonReact"
+                            isActive={animatedLabel === 'React' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('React');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     React
                                 </span>
                             }
@@ -101,10 +145,18 @@ class TechnologyStack extends Component {
                             <img style={{ width: '40px' }} src={react} className="react-logo" alt="react-logo" />
                         </Hexagon>
                         <Hexagon
-                            className="hexagonRedux"
                             key={'frontendStackHexagon4'}
+                            className="hexagonRedux"
+                            isActive={animatedLabel === 'Redux' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('Redux');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     Redux
                                 </span>
                             }
@@ -118,10 +170,18 @@ class TechnologyStack extends Component {
                             <img style={{ width: '40px' }} src={redux} className="redux-logo" alt="redux-logo" />
                         </Hexagon>
                         <Hexagon
-                            className="hexagonRedux"
                             key={'Redux-Saga'}
+                            className="hexagonRedux"
+                            isActive={animatedLabel === 'Redux-Saga' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('Redux-Saga');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     Redux-Saga
                                 </span>
                             }
@@ -135,10 +195,18 @@ class TechnologyStack extends Component {
                             <img style={{ width: '50px' }} src={reduxSaga} className="redux-saga-logo" alt="redux-saga-logo" />
                         </Hexagon>
                         <Hexagon
-                            className="hexagonNodeJS"
                             key={'NodeJS'}
+                            className="hexagonNodeJS"
+                            isActive={animatedLabel === 'NodeJS' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('NodeJS');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     NodeJS
                                 </span>
                             }
@@ -154,8 +222,16 @@ class TechnologyStack extends Component {
                         <Hexagon
                             key={'frontendStackHexagon5'}
                             className="hexagonPostCSS"
+                            isActive={animatedLabel === 'PostCSS' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('PostCSS');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     PostCSS
                                 </span>
                             }
@@ -171,8 +247,16 @@ class TechnologyStack extends Component {
                         <Hexagon
                             key={'frontendStackHexagon6'}
                             className="hexagonWebpack"
+                            isActive={animatedLabel === 'Webpack' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('Webpack');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     Webpack
                                 </span>
                             }
@@ -192,7 +276,7 @@ class TechnologyStack extends Component {
                             key={'designerStackHexagon1'}
                             className="hexagonFigma"
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     Figma
                                 </span>
                             }
@@ -203,7 +287,7 @@ class TechnologyStack extends Component {
                             key={'designerStackHexagon2'}
                             className="hexagonIllustrator"
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     Illustrator
                                 </span>
                             }
@@ -214,7 +298,7 @@ class TechnologyStack extends Component {
                             key={'designerStackHexagon3'}
                             className="hexagonPhotoshop"
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     Photoshop
                                 </span>
                             }
@@ -225,7 +309,7 @@ class TechnologyStack extends Component {
                             key={'designerStackHexagon4'}
                             className="hexagonAnimate"
                             labelStatic={
-                                <span className={`${style.label}`}>
+                                <span className={`${style.labelStatic}`}>
                                     Animate
                                 </span>
                             }

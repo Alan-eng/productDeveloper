@@ -78,6 +78,11 @@
 
 /* ------------------------------Animation------------------------ */
 
+.labelStatic {
+  color: #539cff;
+  line-height: 24px;
+}
+
 .label {
   color: #d8d8d8;
   line-height: 24px;
@@ -86,8 +91,9 @@
 .typeAnimation {
   font-size: 12px;
   display: inline-block;
+  padding-right: 1ch;
   position: relative;
-  animation: type 3s steps(9) infinite alternate;
+  animation: type 2s steps(16);
   overflow: hidden;
   white-space: nowrap;
   font-family: 'Oxygen Mono', monospace;
@@ -109,7 +115,7 @@
     width: 0ch;
   }
 
-  50% {
-    width: 9ch;
+  100% {
+    width: 100%;
   }
 }

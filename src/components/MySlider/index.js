@@ -100,7 +100,6 @@ class Slider extends Component {
     }
 
     render() {
-        console.log('this.sliderRef', this.sliderRef.current)
         const {
             images,
             currentIndex,

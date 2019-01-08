@@ -10,7 +10,11 @@ class Hexagon extends Component {
     render() {
         const hexClass = `${style.hexagon} ${style[this.props.className]} `
         return (
-            <div className={style.root}>
+            <div
+                onMouseOver={this.props.onMouseOver}
+                onMouseLeave={this.props.onMouseLeave}
+                className={`${style.root} ${this.props.isActive ? style.hover : ''}`}
+            >
                 <div className={hexClass}>
                     {this.props.children}
                 </div>
