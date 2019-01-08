@@ -48,7 +48,7 @@
     bottom: 0;
     right: 0;
     z-index: 3;
-    background-color: #3647b3;
+    background-color: #383c52;
     opacity: 0.5;
   }
 }
@@ -188,4 +188,12 @@
   .openMenu::after {
     content: '';
   }
+}
+
+.menuTopDescription {
+  line-height: 20px;
+}
+
+.menuTopDescriptionSmall {
+  white-space: nowrap;
 }

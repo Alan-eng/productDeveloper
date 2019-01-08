@@ -88,7 +88,7 @@ class TechnologyStack extends Component {
                             label={
                                 animatedLabel === 'JS' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        Java Script
+                                        dynamic user experience
                                 </span> : null
                             }
                         >
@@ -138,7 +138,7 @@ class TechnologyStack extends Component {
                             label={
                                 animatedLabel === 'React' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        React
+                                        fast interactive UIs
                                     </span> : null
                             }
                         >
@@ -163,7 +163,7 @@ class TechnologyStack extends Component {
                             label={
                                 animatedLabel === 'Redux' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        Redux
+                                        uniform behavior
                                     </span> : null
                             }
                         >
@@ -188,7 +188,7 @@ class TechnologyStack extends Component {
                             label={
                                 animatedLabel === 'Redux-Saga' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        Redux-Saga
+                                        side effects are nice
                                     </span> : null
                             }
                         >
@@ -213,7 +213,7 @@ class TechnologyStack extends Component {
                             label={
                                 animatedLabel === 'NodeJS' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        NodeJS
+                                        JavaScript everywhere
                                     </span> : null
                             }
                         >
@@ -238,7 +238,7 @@ class TechnologyStack extends Component {
                             label={
                                 animatedLabel === 'PostCSS' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        PostCSS
+                                        tomorrow's CSS syntax
                                     </span> : null
                             }
                         >
@@ -263,7 +263,7 @@ class TechnologyStack extends Component {
                             label={
                                 animatedLabel === 'Webpack' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        Webpack
+                                        packaging any asset
                                     </span> : null
                             }
                         >

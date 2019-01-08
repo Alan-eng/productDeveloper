@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
 import ScrollableAnchor from "react-scrollable-anchor"
 import Modal from '../Modal';
-import superkassa from './superkassa.jpg';
+import superkassaImg from './superkassa.jpg';
+import runesImg from './runes.jpg';
 import style from './index.css';
 
 class Projects extends Component {
@@ -29,8 +30,21 @@ class Projects extends Component {
                 </ScrollableAnchor>
                 <h4 className={style.headerSmall}>I design and code beautifully simple things, and I love what I do.</h4>
                 <div className={style.card}>
-                    <img src={superkassa} className={style.projectImg} alt="superkassa site" />
-                    <p className={style.titleCard}>card title</p>
+                    <img src={superkassaImg} className={style.projectImg} alt="superkassa site" />
+                    <p className={style.titleCard}>superkassa</p>
+                    <div className={style.overlay}>
+                        <button
+                            className={style.btnCard}
+                            type="button"
+                            onClick={this.showModal}
+                        >
+                            SHOW
+                        </button>
+                    </div>
+                </div>
+                <div className={style.card}>
+                    <img src={runesImg} className={style.projectImg} alt="nord runes site" />
+                    <p className={style.titleCard}>nord runes</p>
                     <div className={style.overlay}>
                         <button
                             className={style.btnCard}
@@ -43,7 +57,7 @@ class Projects extends Component {
                 </div>
 
                 <Modal show={this.state.modal} handleClose={this.hideModal}>
-                    <img src={superkassa} className={style.imgInModal} alt="superkassa site" />
+                    <img src={superkassaImg} className={style.imgInModal} alt="superkassa site" />
                     <div className={style.contentInModal}>
                         <h2>Superkassa.ru</h2>
                         <h4>Airtickets sale</h4>

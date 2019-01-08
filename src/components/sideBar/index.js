@@ -17,6 +17,10 @@ class SideBar extends Component {
     }
 
     setActiveLink(link) {
+        if (this.props.windowWidth === 'mobile' || this.props.windowWidth === 'tablet') {
+            this.openCloseMenu()
+        }
+
         this.setState({
             activeLink: link
         })
@@ -155,7 +159,7 @@ class SideBar extends Component {
                             <FaBars />
                         }
                     </button>
-                    <span>Alan Betanov <small>(Frontend developer)</small></span>
+                    <span className={style.menuTopDescription}>Alan Betanov <small className={style.menuTopDescriptionSmall}>(Frontend developer)</small></span>
                 </nav>
             </Fragment>
         )

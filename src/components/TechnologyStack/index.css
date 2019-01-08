@@ -10,6 +10,7 @@
 
 .headerSmall {
   font-size: 24px;
+  width: 200px;
 }
 
 @media (--only-mobile-screen) {
@@ -32,26 +33,30 @@
 
 .columnContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 @media (--only-mobile-screen) {
   .columnContainer {
     flex-direction: column;
-    padding-left: 30%;
+    margin-left: 12px;
+    margin-right: 0;
+    /* padding-left: 10%; */
   }
 }
 
-@media (--only-small-mobile-screen) {
+/* @media (--only-small-mobile-screen) {
   .columnContainer {
     padding-left: 10%;
   }
-}
+} */
 
 @media (--only-very-small-mobile-screen) {
   .columnContainer {
-    padding-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -62,11 +67,11 @@
   flex-direction: column;
 }
 
-.frontendStack div:nth-child(even) {
+.frontendStack > div:nth-child(even) {
   margin-left: 36px;
 }
 
-.designStack div:nth-child(even) {
+.designStack > div:nth-child(even) {
   margin-left: 36px;
 }
 

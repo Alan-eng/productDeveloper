@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import { AboutMe, SideBar } from './components'
-// import SideBar from "./components/SideBar"
-// import AboutMe from "./components/AboutMe"
 import TechnologyStack from "./components/TechnologyStack"
 import Projects from "./components/Projects"
 import ParallaxBackground from "./components/ParallaxBackground"
 import Particles from 'react-particles-js';
-// import Slider from './components/Sliders/Slider'
 import SliderTech from './components/Slider/SliderTech'
 import MySliderTech from './components/MySlider/SliderTech'
 import { hot } from 'react-hot-loader'
@@ -31,21 +28,13 @@ class App extends Component {
             body = d.getElementsByTagName('body')[0],
             width = w.innerWidth || documentElement.clientWidth || body.clientWidth;
 
-        let windowSize = '';
-        console.log('width = ', width);
-
-        switch (width) {
-            case (width < 768):
-                console.log('mobile!!!');
-                windowSize = 'mobile';
-                break;
-            case (width < 1024):
-                windowSize = 'tablet';
-                break;
-            default:
-                console.log('enter switch mode!!!', width)
-                windowSize = 'desktop';
-                break;
+        let windowSize;
+        if (width < 768) {
+            windowSize = 'mobile'
+        } else if (width < 1024) {
+            windowSize = 'tablet'
+        } else {
+            windowSize = 'desktop'
         }
 
         this.setState({ windowWidth: windowSize });
@@ -66,132 +55,130 @@ class App extends Component {
     render() {
         return (
             <div className={style.root}>
-                <SideBar />
+                <SideBar windowWidth={this.state.windowWidth} />
 
                 <div className={style.centerContainer}>
-                    {/* <Slider /> */}
-                    {/* <SliderTech /> */}
-                    <MySliderTech />
                     <AboutMe />
                     <TechnologyStack />
                     <Projects />
                 </div>
-                <Particles
-                    params={
-                        {
-                            "particles": {
-                                "number": {
-                                    "value": 80,
-                                    "density": {
-                                        "enable": true,
-                                        "value_area": 800
-                                    }
-                                },
-                                "color": {
-                                    "value": "#ffffff"
-                                },
-                                "shape": {
-                                    "type": "circle",
-                                    "stroke": {
-                                        "width": 0,
-                                        "color": "#000000"
-                                    },
-                                    "polygon": {
-                                        "nb_sides": 5
-                                    },
-                                    "image": {
-                                        "src": "img/github.svg",
-                                        "width": 100,
-                                        "height": 100
-                                    }
-                                },
-                                "opacity": {
-                                    "value": 0.5,
-                                    "random": false,
-                                    "anim": {
-                                        "enable": false,
-                                        "speed": 1,
-                                        "opacity_min": 0.1,
-                                        "sync": false
-                                    }
-                                },
-                                "size": {
-                                    "value": 2,
-                                    "random": true,
-                                    "anim": {
-                                        "enable": false,
-                                        "speed": 40,
-                                        "size_min": 0.1,
-                                        "sync": false
-                                    }
-                                },
-                                "line_linked": {
-                                    "enable": true,
-                                    "distance": 150,
-                                    "color": "#A0CBFE",
-                                    "opacity": 0.4,
-                                    "width": 1
-                                },
-                                "move": {
-                                    "enable": true,
-                                    "speed": 3,
-                                    "direction": "none",
-                                    "random": false,
-                                    "straight": false,
-                                    "out_mode": "out",
-                                    "bounce": false,
-                                    "attract": {
-                                        "enable": false,
-                                        "rotateX": 600,
-                                        "rotateY": 1200
-                                    }
-                                }
-                            },
-                            "interactivity": {
-                                "detect_on": "canvas",
-                                "events": {
-                                    "onhover": {
-                                        "enable": false,
-                                        "mode": "bubble"
-                                    },
-                                    "onclick": {
-                                        "enable": false,
-                                        "mode": "push"
-                                    },
-                                    "resize": true
-                                },
-                                "modes": {
-                                    "grab": {
-                                        "distance": 400,
-                                        "line_linked": {
-                                            "opacity": 1
+                {this.state.windowWidth === 'mobile' ? null :
+                    <Particles
+                        params={
+                            {
+                                "particles": {
+                                    "number": {
+                                        "value": 80,
+                                        "density": {
+                                            "enable": true,
+                                            "value_area": 800
                                         }
                                     },
-                                    "bubble": {
-                                        "distance": 400,
-                                        "size": 40,
-                                        "duration": 2,
-                                        "opacity": 8,
-                                        "speed": 3
+                                    "color": {
+                                        "value": "#ffffff"
                                     },
-                                    "repulse": {
-                                        "distance": 200,
-                                        "duration": 0.4
+                                    "shape": {
+                                        "type": "circle",
+                                        "stroke": {
+                                            "width": 0,
+                                            "color": "#000000"
+                                        },
+                                        "polygon": {
+                                            "nb_sides": 5
+                                        },
+                                        "image": {
+                                            "src": "img/github.svg",
+                                            "width": 100,
+                                            "height": 100
+                                        }
                                     },
-                                    "push": {
-                                        "particles_nb": 4
+                                    "opacity": {
+                                        "value": 0.5,
+                                        "random": false,
+                                        "anim": {
+                                            "enable": false,
+                                            "speed": 1,
+                                            "opacity_min": 0.1,
+                                            "sync": false
+                                        }
                                     },
-                                    "remove": {
-                                        "particles_nb": 2
+                                    "size": {
+                                        "value": 2,
+                                        "random": true,
+                                        "anim": {
+                                            "enable": false,
+                                            "speed": 40,
+                                            "size_min": 0.1,
+                                            "sync": false
+                                        }
+                                    },
+                                    "line_linked": {
+                                        "enable": true,
+                                        "distance": 150,
+                                        "color": "#A0CBFE",
+                                        "opacity": 0.4,
+                                        "width": 1
+                                    },
+                                    "move": {
+                                        "enable": true,
+                                        "speed": 3,
+                                        "direction": "none",
+                                        "random": false,
+                                        "straight": false,
+                                        "out_mode": "out",
+                                        "bounce": false,
+                                        "attract": {
+                                            "enable": false,
+                                            "rotateX": 600,
+                                            "rotateY": 1200
+                                        }
                                     }
-                                }
-                            },
-                            "retina_detect": true
+                                },
+                                "interactivity": {
+                                    "detect_on": "canvas",
+                                    "events": {
+                                        "onhover": {
+                                            "enable": false,
+                                            "mode": "bubble"
+                                        },
+                                        "onclick": {
+                                            "enable": false,
+                                            "mode": "push"
+                                        },
+                                        "resize": true
+                                    },
+                                    "modes": {
+                                        "grab": {
+                                            "distance": 400,
+                                            "line_linked": {
+                                                "opacity": 1
+                                            }
+                                        },
+                                        "bubble": {
+                                            "distance": 400,
+                                            "size": 40,
+                                            "duration": 2,
+                                            "opacity": 8,
+                                            "speed": 3
+                                        },
+                                        "repulse": {
+                                            "distance": 200,
+                                            "duration": 0.4
+                                        },
+                                        "push": {
+                                            "particles_nb": 4
+                                        },
+                                        "remove": {
+                                            "particles_nb": 2
+                                        }
+                                    }
+                                },
+                                "retina_detect": true
+                            }
                         }
-                    }
-                    className={style.particlesWrapper}
-                    style={{}}
-                />
+                        className={style.particlesWrapper}
+                        style={{}}
+                    />}
             </div>
         )
     }

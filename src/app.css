@@ -41,15 +41,22 @@ html {
   line-height: initial;
 }
 
-/* @media (--only-mobile-screen), (--only-tablet-screen) {
-  .colorFilter {
-    filter: brightness(20%);
+@media (--only-tablet-screen), (--only-mobile-screen) {
+  .centerContainer {
+    margin-top: 60px;
   }
-} */
+}
+
+@media (--only-very-small-mobile-screen) {
+  .centerContainer {
+    padding: 12px;
+  }
+}
 
 .particlesWrapper {
   width: 100%;
   top: 0;
+  bottom: 0;
   position: fixed;
   z-index: 0;
 }
