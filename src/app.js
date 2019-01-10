@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { AboutMe, SideBar } from './components'
+import { AboutMe, SideBar, Contacts } from './components'
 import TechnologyStack from "./components/TechnologyStack"
 import Projects from "./components/Projects"
 import ParallaxBackground from "./components/ParallaxBackground"
@@ -61,6 +61,7 @@ class App extends Component {
                     <AboutMe />
                     <TechnologyStack />
                     <Projects />
+                    <Contacts />
                 </div>
                 {this.state.windowWidth === 'mobile' ? null :
                     <Particles
