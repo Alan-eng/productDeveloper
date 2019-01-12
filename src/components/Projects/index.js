@@ -25,7 +25,7 @@ class Projects extends Component {
 
     render() {
         return (
-            <Fragment >
+            <section className={style.projects}>
                 <ScrollableAnchor id={'projects'}>
                     <h1 className={style.header}>My recent Projects</h1>
                 </ScrollableAnchor>
@@ -99,7 +99,7 @@ class Projects extends Component {
                         </div>
                     </Modal>
                 }[this.state.modal]}
-            </Fragment>
+            </section>
         )
     }
 };

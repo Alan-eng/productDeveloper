@@ -1,23 +1,29 @@
 @import '../../themes/variables.css';
 
-.root {
-  display: flex;
-  margin-bottom: 32px;
+.aboutMe {
+  background-color: #1816218a;
+  padding-top: 32px;
 }
 
-.root img {
+.aboutMeContent {
+  display: flex;
+  margin-bottom: 32px;
+  padding: 24px;
+}
+
+.aboutMeContent img {
   border-radius: 4px;
   object-fit: cover;
   width: 50%;
 }
 
 @media (--only-mobile-screen) {
-  .root {
+  .aboutMeContent {
     flex-direction: column;
     align-items: center;
   }
 
-  .root img {
+  .aboutMeContent img {
     width: 100%;
     max-width: 250px;
     max-height: 380px;

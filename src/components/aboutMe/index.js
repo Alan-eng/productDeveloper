@@ -6,13 +6,13 @@ import style from './index.css';
 const AboutMe = () => {
 
     return (
-        <div>
+        <section className={style.aboutMe}>
             <ScrollableAnchor id={'aboutMe'}>
                 <h1 className={style.header}>Front-end &nbsp; <span className={style.headerAnimation}> Developer</span></h1>
             </ScrollableAnchor>
 
             <h4 className={style.headerChild}>I design and code beautifully simple things, and I love what I do.</h4>
-            <div className={style.root}>
+            <div className={style.aboutMeContent}>
                 <img src={Alan} alt="portrait" />
                 <article className={style.menu}>
                     Hi, I’m Alan. Nice to meet you. <br />
@@ -23,7 +23,7 @@ const AboutMe = () => {
                     I value simple content structure, clean design patterns, and thoughtful interactions.
                 </article>
             </div>
-        </div>
+        </section>
     )
 };
 

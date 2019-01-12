@@ -9,10 +9,11 @@ const Contacts = () => (
             <ScrollableAnchor id={'contacts'}>
                 <h1>Contacts</h1>
             </ScrollableAnchor >
-            If you have any question, or just want to say hello, feel free to contact me ;) <br />
+            <p>If you have any question, or just want to say hello, feel free to contact me ;)</p>
             <ul className={style.contactsUl}>
 
-                <li className={style.contact}><FaEnvelope /> alan-eng@yandex.ru</li>
+                <FaEnvelope className={style.envelope} />
+                <li className={style.contact}>alan-eng@yandex.ru</li>
                 {/* <li className={style.contact}><FaTwitter /> alan-eng@yandex.ru</li> */}
 
             </ul>
