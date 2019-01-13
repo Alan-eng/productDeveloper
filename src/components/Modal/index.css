@@ -66,3 +66,35 @@
 .displayNone {
   display: none;
 }
+
+.image {
+  position: relative;
+  user-select: none;
+}
+
+.prevImageButton,
+.nextImageButton {
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+  border: none;
+  right: 0;
+  bottom: 4px;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #fff;
+  background-color: #58b3ff;
+}
+
+.prevImageButton:hover,
+.nextImageButton:hover {
+  background-color: #539cff;
+}
+
+.prevImageButton {
+  left: 0;
+}

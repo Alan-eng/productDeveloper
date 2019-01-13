@@ -114,3 +114,19 @@
 .technologyWord {
   color: #539cff;
 };
+
+.linkToProject {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #58b3ff;
+  color: #fff;
+}
+
+.linkProject1 {
+  margin-top: 24px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #58b3ff;
+  color: #fff;
+}

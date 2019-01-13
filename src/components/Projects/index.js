@@ -2,6 +2,9 @@ import React, { Component, Fragment } from "react";
 import ScrollableAnchor from "react-scrollable-anchor"
 import Modal from '../Modal';
 import superkassaImg from './superkassa.jpg';
+import superkassa1Img from './superkassa1.jpg';
+import superkassa2Img from './superkassa2.jpg';
+import superkassa3Img from './superkassa3.jpg';
 import runesImg from './runes.jpg';
 import tensesGeneratorImg from './tensesGenerator.jpg';
 import style from './index.css';
@@ -71,8 +74,15 @@ class Projects extends Component {
                 </div>
 
                 {{
-                    superkassa: <Modal show={this.state.modal} handleClose={this.hideModal}>
-                        <img src={superkassaImg} className={style.imgInModal} alt="superkassa site" />
+                    superkassa: <Modal
+                        images={[
+                            <img src={superkassaImg} alt="superkassa site" />,
+                            <img src={superkassa1Img} alt="superkassa site" />,
+                            <img src={superkassa2Img} alt="superkassa site" />,
+                            <img src={superkassa3Img} alt="superkassa site" />,
+                        ]}
+                        show={this.state.modal} handleClose={this.hideModal}
+                    >
                         <div className={style.contentInModal}>
                             <h2>Superkassa.ru</h2>
                             <h4 className={style.achievementsHeader}>Airtickets sale</h4>
@@ -81,15 +91,22 @@ class Projects extends Component {
 
                             <h4 className={style.achievementsHeader}>My achievements:</h4>
                             <ul>
-                                <li>I have built fast and robust UI using <span className={style.technologyWord}>React</span></li>
-                                <li>I have made predictable state management of the whole application with <span className={style.technologyWord}>Redux</span></li>
-                                <li>I have made asynchronous things more efficient to execute with <span className={style.technologyWord}>Redux-Saga</span></li>
-                                <li>Node.js</li>
+                                <li>built fast and robust UI using <span className={style.technologyWord}>React</span></li>
+                                <li>made predictable state management of the whole application with <span className={style.technologyWord}>Redux</span></li>
+                                <li>wrote asynchronous things easier to manage with <span className={style.technologyWord}>Redux-Saga</span></li>
+                                <li>made client-server communication with <span className={style.technologyWord}>Node.js</span></li>
                             </ul>
+                            <a className={style.linkProject1} href='https://superkassa.ru' target='_blank'>Superkassa.ru</a>
+
                         </div>
                     </Modal>,
-                    runes: <Modal show={this.state.modal} handleClose={this.hideModal}>
-                        <img src={runesImg} className={style.imgInModal} alt="superkassa site" />
+
+                    runes: <Modal
+                        images={[
+                            <img src={runesImg} alt="nordic runes site" />
+                        ]}
+                        show={this.state.modal} handleClose={this.hideModal}
+                    >
                         <div className={style.contentInModal}>
                             <h2>Superkassa.ru</h2>
                             <h4>Airtickets sale</h4>
@@ -97,7 +114,13 @@ class Projects extends Component {
                             <p>Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.</p>
                         </div>
                     </Modal>,
-                    tenses: <Modal show={this.state.modal} handleClose={this.hideModal}>
+
+                    tenses: <Modal
+                        images={[
+                            <img src={tensesGeneratorImg} className={style.imgInModal} alt="superkassa site" />
+                        ]}
+                        show={this.state.modal} handleClose={this.hideModal}
+                    >
                         <img src={tensesGeneratorImg} className={style.imgInModal} alt="superkassa site" />
                         <div className={style.contentInModal}>
                             <h2>Superkassa.ru</h2>
