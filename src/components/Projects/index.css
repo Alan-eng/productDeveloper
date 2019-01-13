@@ -93,20 +93,24 @@
 
 /* -------------------------------- Modal ------------------- */
 
-/* .imgInModal {
-  max-width: 100%;
-} */
-
 .contentInModal {
   width: 100%;
-  padding: 0 24px;
+  padding: 12px 24px;
 }
 
 .contentInModal * {
   text-align: left;
 }
 
-.contentInModal *:nth-child(2) {
+.contentInModal > *:nth-child(2) {
   color: #c0c2ce;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.achievementsHeader {
+  margin-bottom: 16px;
+}
+
+.technologyWord {
+  color: #539cff;
+};

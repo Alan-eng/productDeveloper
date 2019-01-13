@@ -75,9 +75,17 @@ class Projects extends Component {
                         <img src={superkassaImg} className={style.imgInModal} alt="superkassa site" />
                         <div className={style.contentInModal}>
                             <h2>Superkassa.ru</h2>
-                            <h4>Airtickets sale</h4>
+                            <h4 className={style.achievementsHeader}>Airtickets sale</h4>
+                            <p>Airtickets agency which works with Aviasales and Skyskanner and helps search thousands of cheap tickets and cheap flight offers to your favorite.
+                                </p>
 
-                            <p>Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.</p>
+                            <h4 className={style.achievementsHeader}>My achievements:</h4>
+                            <ul>
+                                <li>I have built fast and robust UI using <span className={style.technologyWord}>React</span></li>
+                                <li>I have made predictable state management of the whole application with <span className={style.technologyWord}>Redux</span></li>
+                                <li>I have made asynchronous things more efficient to execute with <span className={style.technologyWord}>Redux-Saga</span></li>
+                                <li>Node.js</li>
+                            </ul>
                         </div>
                     </Modal>,
                     runes: <Modal show={this.state.modal} handleClose={this.hideModal}>
