@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import { goToAnchor } from 'react-scrollable-anchor'
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 // import Close from './close.svg';
@@ -38,27 +39,24 @@ class Modal extends Component {
     }
 
     render() {
+        const container = document.getElementById("modal");
         const { handleClose, show, children } = this.props
-        const showHideClassName = show ? `${style.modal} ${style.displayBlock}` : `${style.modal} ${style.displayNone}`;
-        return (
-            <div className={showHideClassName} onClick={handleClose}>
-                <section className={style.modalMain} onClick={(e) => { e.stopPropagation() }}>
-                    <div className={style.image}>
-                        {this.props.images ? this.props.images[this.state.currentImage] : null}
 
-                        <FaChevronRight className={style.nextImageButton} onClick={this.nextImage} />
-                        <FaChevronLeft className={style.prevImageButton} onClick={this.previousImage} />
-                    </div>
-                    {children}
-                    <button onClick={handleClose} className={style.closeBtn} />
-                </section>
-            </div>
-        );
+        const modalComponent = <div className={style.overlay} onClick={() => { handleClose(); goToAnchor('projects') }}>
+            <section className={style.modalMain} onClick={(e) => { e.stopPropagation() }}>
+                <button onClick={() => { handleClose(); goToAnchor('projects') }} className={style.closeBtn} />
+                <div className={style.image}>
+                    {this.props.images ? this.props.images[this.state.currentImage] : null}
+
+                    <FaChevronRight className={style.nextImageButton} onClick={this.nextImage} />
+                    <FaChevronLeft className={style.prevImageButton} onClick={this.previousImage} />
+                </div>
+                {children}
+            </section>
+        </div>
+
+        return ReactDOM.createPortal(modalComponent, container);
     }
 };
-
-const container = document.createElement("div");
-document.body.appendChild(container);
-ReactDOM.render(<Modal />, container);
 
 export default Modal;

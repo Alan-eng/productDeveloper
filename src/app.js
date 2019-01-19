@@ -16,9 +16,11 @@ class App extends Component {
         super(props)
         this.state = {
             windowWidth: null,
+            stopScrolling: false,
         }
 
         this.updateDimensions = this.updateDimensions.bind(this);
+        this.stopScrolling = this.stopScrolling.bind(this);
     }
 
     updateDimensions() {
@@ -40,6 +42,10 @@ class App extends Component {
         this.setState({ windowWidth: windowSize });
     }
 
+    stopScrolling(boolVal) {
+        this.setState({ stopScrolling: boolVal })
+    }
+
     componentWillMount() {
         this.updateDimensions();
     }
@@ -57,10 +63,10 @@ class App extends Component {
             <div className={style.root}>
                 <SideBar windowWidth={this.state.windowWidth} />
 
-                <div className={style.centerContainer}>
+                <div className={`${style.centerContainer} ${this.state.stopScrolling ? style.fixed : ''}`}>
                     <AboutMe />
                     <TechnologyStack />
-                    <Projects />
+                    <Projects stopScrolling={this.stopScrolling} />
                     <Contacts />
                 </div>
                 {this.state.windowWidth === 'mobile' ? null :

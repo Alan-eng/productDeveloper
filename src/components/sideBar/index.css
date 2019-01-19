@@ -48,13 +48,13 @@
 
 @media (--only-tablet-screen), (--only-mobile-screen) {
   .cover {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     z-index: 3;
-    background-color: #383c52;
+    background-color: #3c4782;
     opacity: 0.5;
   }
 }

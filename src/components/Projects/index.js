@@ -20,10 +20,13 @@ class Projects extends Component {
 
     showModal(name) {
         this.setState({ modal: name });
+        this.props.stopScrolling(true)
     };
 
     hideModal() {
         this.setState({ modal: '' });
+        this.props.stopScrolling(false)
+        window.scrollTo(0, document.body.scrollHeight);
     };
 
     render() {
@@ -108,10 +111,14 @@ class Projects extends Component {
                         show={this.state.modal} handleClose={this.hideModal}
                     >
                         <div className={style.contentInModal}>
-                            <h2>Superkassa.ru</h2>
-                            <h4>Airtickets sale</h4>
-
-                            <p>Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.</p>
+                            <h2>Runes of norse</h2>
+                            <h4>Education website</h4>
+                            <p>Helps people to begin to study the runes (fascinating and mysterious symbols from the ancient Norse/Germanic world) </p>
+                            <h4 className={style.achievementsHeader}>My achievements:</h4>
+                            <ul>
+                                <li>design concept using <span className={style.technologyWord}>Photoshop</span></li>
+                                <li>wrote whole site with pure <span className={style.technologyWord}>HTML+CSS+JS</span></li>
+                            </ul>
                         </div>
                     </Modal>,
 
