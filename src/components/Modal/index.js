@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { goToAnchor } from 'react-scrollable-anchor'
+import Transition from 'react-transition-group/Transition';
 import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 // import Close from './close.svg';
@@ -13,7 +14,8 @@ class Modal extends Component {
         super(props)
 
         this.state = {
-            currentImage: 0
+            currentImage: 0,
+            transitionIn: true
         }
 
         this.nextImage = this.nextImage.bind(this)
@@ -23,18 +25,18 @@ class Modal extends Component {
     nextImage() {
         const { currentImage } = this.state
         if (currentImage < this.props.images.length - 1) {
-            this.setState({ currentImage: this.state.currentImage + 1 })
+            this.setState({ currentImage: this.state.currentImage + 1, transitionIn: true })
         } else {
-            this.setState({ currentImage: 0 })
+            this.setState({ currentImage: 0, transitionIn: true })
         }
     }
 
     previousImage() {
         const { currentImage } = this.state
         if (currentImage > 0) {
-            this.setState({ currentImage: this.state.currentImage - 1 })
+            this.setState({ currentImage: this.state.currentImage - 1, transitionIn: true })
         } else {
-            this.setState({ currentImage: this.props.images.length - 1 })
+            this.setState({ currentImage: this.props.images.length - 1, transitionIn: true })
         }
     }
 
@@ -42,15 +44,44 @@ class Modal extends Component {
         const container = document.getElementById("modal");
         const { handleClose, show, children } = this.props
 
+        const duration = 300;
+        const defaultStyle = {
+            transition: `all ${duration}ms linear`,
+            opacity: 1,
+        }
+
+        const transitionStyles = {
+            entering: {
+                opacity: 0,
+            },
+            entered: {
+                opacity: 1,
+            },
+            exiting: {
+                opacity: 0.5,
+            },
+            // exited: {
+            //     opacity: 0,
+            //     transform: `translateX(60px)`
+            // }
+        };
+
         const modalComponent = <div className={style.overlay} onClick={() => { handleClose(); goToAnchor('projects') }}>
             <section className={style.modalMain} onClick={(e) => { e.stopPropagation() }}>
                 <button onClick={() => { handleClose(); goToAnchor('projects') }} className={style.closeBtn} />
-                <div className={style.image}>
-                    {this.props.images ? this.props.images[this.state.currentImage] : null}
+                <Transition in={this.state.transitionIn} appear timeout={duration} onEntering={() => this.setState({ transitionIn: false })}>
+                    {(state) => (
+                        <div style={{
+                            ...defaultStyle,
+                            ...transitionStyles[state]
+                        }}
+                            className={style.image}>
+                            {this.props.images ? this.props.images[this.state.currentImage] : null}
 
-                    <FaChevronRight className={style.nextImageButton} onClick={this.nextImage} />
-                    <FaChevronLeft className={style.prevImageButton} onClick={this.previousImage} />
-                </div>
+                            <FaChevronRight className={style.nextImageButton} onClick={this.nextImage} />
+                            <FaChevronLeft className={style.prevImageButton} onClick={this.previousImage} />
+                        </div>)}
+                </Transition>
                 {children}
             </section>
         </div>
