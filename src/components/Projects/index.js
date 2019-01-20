@@ -40,7 +40,6 @@ class Projects extends Component {
                 <ScrollableAnchor id={'projects'}>
                     <h1 className={style.header}>My recent Projects</h1>
                 </ScrollableAnchor>
-                <h4 className={style.headerSmall}>I design and code beautifully simple things, and I love what I do.</h4>
                 <div className={style.card}>
                     <img src={superkassaImg} className={style.projectImg} alt="superkassa site" />
                     <p className={style.titleCard}>superkassa</p>
@@ -69,7 +68,7 @@ class Projects extends Component {
                 </div>
                 <div className={style.card}>
                     <img src={tensesGeneratorImg} className={style.projectImg} alt="english tenses site" />
-                    <p className={style.titleCard}>nord runes</p>
+                    <p className={style.titleCard}>English tenses generator</p>
                     <div className={style.overlay}>
                         <button
                             className={style.btnCard}
@@ -122,9 +121,8 @@ class Projects extends Component {
                             <h2>Runes of norse</h2>
                             <h4>Education website</h4>
                             <p>Helps people to begin to study the runes (fascinating and mysterious symbols from the ancient Norse/Germanic world) </p>
-                            <h4 className={style.achievementsHeader}>My achievements:</h4>
                             <ul>
-                                <li>my design concept using <span className={style.technologyWord}>Photoshop</span></li>
+                                <li>design concept using <span className={style.technologyWord}>Photoshop</span></li>
                                 <li>layout coding with <span className={style.technologyWord}>HTML+CSS</span></li>
                                 <li>page animations using <span className={style.technologyWord}>jQuery</span></li>
                             </ul>
@@ -142,10 +140,14 @@ class Projects extends Component {
                         show={this.state.modal} handleClose={this.hideModal}
                     >
                         <div className={style.contentInModal}>
-                            <h2>Superkassa.ru</h2>
-                            <h4>Airtickets sale</h4>
+                            <h2>English tenses generator</h2>
+                            <h4>interactive table</h4>
 
-                            <p>Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.</p>
+                            <p>Help English language learners with grammar.</p>
+                            <ul>
+                                <li>material design components <span className={style.technologyWord}>Material UI + React</span></li>
+                                <li>layout coding with <span className={style.technologyWord}>HTML+CSS</span></li>
+                            </ul>
 
                             <a className={style.linkProject1} href='https://alan-eng.github.io/english-tenses-generator/' target='_blank'>Tenses-generator</a>
 

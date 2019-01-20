@@ -1,5 +1,7 @@
 import React from "react";
 import ScrollableAnchor from "react-scrollable-anchor"
+import { FaFly } from 'react-icons/fa';
+
 import Alan from './Alan.jpg';
 import style from './index.css';
 
@@ -17,10 +19,14 @@ const AboutMe = () => {
                 <article className={style.menu}>
                     Hi, I’m Alan. Nice to meet you. <br />
 
-                    Since beginning my journey as a designer nearly 3 years ago, I've done work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually improving my chops.
+                    Since beginning my journey as a designer nearly 3 years ago, I've collaborated with many talented people to create digital products. I value simple content structure, clean design patterns, and thoughtful interactions.
+                    I play well with others and I'm happy to integrate into your existing team to help get your project implemented.
 
-                    I tend to code things from scratch, and enjoy bringing ideas to life in the browser.
-                    I value simple content structure, clean design patterns, and thoughtful interactions.
+                    <ul className={style.unstyledList}>
+                        <li>30 years old,</li>
+                        <li> St. Petersburg, Russia</li> <br />
+                        <li><FaFly /> willing to relocate</li>
+                    </ul>
                 </article>
             </div>
         </section>

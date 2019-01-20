@@ -102,3 +102,9 @@
     padding-left: 12px;
   }
 }
+
+.unstyledList {
+  list-style-type: none;
+  padding: 0;
+}
+

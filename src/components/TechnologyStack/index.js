@@ -275,10 +275,23 @@ class TechnologyStack extends Component {
                         <Hexagon
                             key={'designerStackHexagon1'}
                             className="hexagonFigma"
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('Figma');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
                                 <span className={`${style.labelStatic}`}>
                                     Figma
                                 </span>
+                            }
+                            label={
+                                animatedLabel === 'Figma' ?
+                                    <span className={`${style.label} ${style.typeAnimation}`}>
+                                        collaborative work
+                                    </span> : null
                             }
                         >
                             <img style={{ width: '40px' }} src={figma} className="figma-logo" alt="figma-logo" />
@@ -286,10 +299,23 @@ class TechnologyStack extends Component {
                         <Hexagon
                             key={'designerStackHexagon2'}
                             className="hexagonIllustrator"
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('Illustrator');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
                                 <span className={`${style.labelStatic}`}>
                                     Illustrator
                                 </span>
+                            }
+                            label={
+                                animatedLabel === 'Illustrator' ?
+                                    <span className={`${style.label} ${style.typeAnimation}`}>
+                                        vector graphic
+                                    </span> : null
                             }
                         >
                             <span style={{ fontSize: '22 px', fontWeight: 'bold' }}>Ai</span>
@@ -297,24 +323,51 @@ class TechnologyStack extends Component {
                         <Hexagon
                             key={'designerStackHexagon3'}
                             className="hexagonPhotoshop"
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('Photoshop');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
                                 <span className={`${style.labelStatic}`}>
                                     Photoshop
                                 </span>
+                            }
+                            label={
+                                animatedLabel === 'Photoshop' ?
+                                    <span className={`${style.label} ${style.typeAnimation}`}>
+                                        enhance images
+                                    </span> : null
                             }
                         >
                             <span style={{ fontSize: '22 px', fontWeight: 'bold' }}>Ps</span>
                         </Hexagon>
                         <Hexagon
                             key={'designerStackHexagon4'}
-                            className="hexagonAnimate"
+                            className="hexagonXd"
+                            isActive={animatedLabel === 'Xd' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('Xd');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
                             labelStatic={
                                 <span className={`${style.labelStatic}`}>
-                                    Animate
+                                    Adobe XD
                                 </span>
                             }
+                            label={
+                                animatedLabel === 'Xd' ?
+                                    <span className={`${style.label} ${style.typeAnimation}`}>
+                                        prototyping UX
+                                    </span> : null
+                            }
                         >
-                            <span style={{ fontSize: '22 px', fontWeight: 'bold' }}>An</span>
+                            <span style={{ fontSize: '22 px', fontWeight: 'bold' }}>XD</span>
                         </Hexagon>
                     </div>
                 </div>

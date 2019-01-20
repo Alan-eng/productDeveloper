@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   background-image: url('./backgroundJSOpacity.png'), linear-gradient(to right, rgba(78, 33, 93, 1), rgba(36, 7, 45, 1));
   width: 100%;
-  background-size: 100vw;
+  background-size: 1500px;
   background-position: right;
   background-attachment: fixed;
 }
@@ -33,7 +33,6 @@ body {
   margin: auto;
   font-weight: 300;
   background-color: #18162163;
-  /* padding: 24px; */
   line-height: initial;
 }
 

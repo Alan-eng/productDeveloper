@@ -11,10 +11,6 @@
   padding: 24px;
 }
 
-/* .contactsInnerContainer {
-  background-color: #181621;
-} */
-
 .contactsUl {
   margin-top: 74px;
   padding: 0;
@@ -36,4 +32,6 @@
 
 .envelope {
   font-size: 54px;
+  margin-bottom: 12px;
+  height: 82px;
 }

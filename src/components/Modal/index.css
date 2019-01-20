@@ -8,7 +8,7 @@
   align-items: center;
   /* background: rgba(0, 0, 0, 0.6); */
   background: url('../../backgroundJSOpacity.png'), linear-gradient(to right, rgba(78, 33, 93, 1), rgba(36, 7, 45, 1)), rgba(0, 0, 0, 0.6);
-  background-size: 100vw;
+  background-size: 1500px;
   background-attachment: fixed;
 }
 

@@ -63,7 +63,7 @@
 
 .frontendStack,
 .designStack {
-  min-width: 200px;
+  min-width: 258px;
   display: flex;
   flex-direction: column;
 }
