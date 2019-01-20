@@ -31,13 +31,6 @@
   user-select: none;
 }
 
-@media (--only-mobile-screen) {
-  .hexagon {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-}
-
 .hexagon:before,
 .hexagon:after {
   content: "";

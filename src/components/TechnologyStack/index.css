@@ -79,6 +79,14 @@
   .designStack {
     margin-top: 60px;
   }
+
+  .frontendStack > div {
+    min-height: 132px;
+  }
+
+  .designStack > div {
+    min-height: 132px;
+  }
 }
 
 /* ------------------------------Animation------------------------ */
