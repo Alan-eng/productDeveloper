@@ -42,8 +42,8 @@ class Projects extends Component {
                 </ScrollableAnchor>
                 <div className={style.card}>
                     <img src={superkassaImg} className={style.projectImg} alt="superkassa site" />
-                    <p className={style.titleCard}>superkassa</p>
                     <div className={style.overlay}>
+                        <p className={style.titleCard}>superkassa</p>
                         <button
                             className={style.btnCard}
                             type="button"
@@ -55,8 +55,8 @@ class Projects extends Component {
                 </div>
                 <div className={style.card}>
                     <img src={runesImg} className={style.projectImg} alt="nord runes site" />
-                    <p className={style.titleCard}>nord runes</p>
                     <div className={style.overlay}>
+                        <p className={style.titleCard}>nord runes</p>
                         <button
                             className={style.btnCard}
                             type="button"
@@ -68,8 +68,8 @@ class Projects extends Component {
                 </div>
                 <div className={style.card}>
                     <img src={tensesGeneratorImg} className={style.projectImg} alt="english tenses site" />
-                    <p className={style.titleCard}>English tenses generator</p>
                     <div className={style.overlay}>
+                        <p className={style.titleCard}>English tenses generator</p>
                         <button
                             className={style.btnCard}
                             type="button"

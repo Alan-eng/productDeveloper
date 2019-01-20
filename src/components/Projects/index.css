@@ -35,7 +35,9 @@
 .overlay {
   position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -50,10 +52,10 @@
 .projectImg {
   object-fit: contain;
   max-width: 100%;
+  border-radius: 4px;
 }
 
 .titleCard {
-  position: absolute;
   width: 100%;
   left: 0;
   top: 20%;
@@ -69,8 +71,9 @@
 
 @media (--only-mobile-screen) {
   .titleCard {
-    font-size: 22px;
-    margin: 0;
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
 }
 
@@ -80,18 +83,24 @@
 }
 
 .btnCard {
-  position: absolute;
+  width: 50%;
   color: #fff;
   border: 2px solid #fff;
+  border-radius: 4px;
   outline: none;
   padding: 16px 24px;
-  font-size: 1.5rem;
-  top: 50%;
+  font-size: 32px;
   text-align: center;
   opacity: 0;
   cursor: pointer;
   background: none;
   transition: opacity .35s ease;
+}
+
+@media (--only-mobile-screen) {
+  .btnCard {
+    font-size: 24px;
+  }
 }
 
 .card:hover .btnCard {
