@@ -8,7 +8,7 @@ class SideBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            menuIsOpen: true,
+            menuIsOpen: (props.windowWidth === 'mobile' || props.windowWidth === 'tablet') ? false : true,
             activeLink: 'aboutMe'
         }
 

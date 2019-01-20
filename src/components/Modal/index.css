@@ -6,10 +6,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: rgba(0, 0, 0, 0.6); */
   background: url('../../backgroundJSOpacity.png'), linear-gradient(to right, rgba(78, 33, 93, 1), rgba(36, 7, 45, 1)), rgba(0, 0, 0, 0.6);
-  background-size: 1500px;
+  background-size: 100vw;
   background-attachment: fixed;
+}
+
+@media (--only-tablet-screen), (--only-mobile-screen) {
+  body {
+    background-size: 1500px;
+  }
 }
 
 @media (--only-tablet-screen) {
@@ -74,7 +79,7 @@
     height: 48px;
     width: 48px;
     padding: 8px;
-    background-color: #539cff;
+    background-color: #5d5d5d4d;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px;
@@ -109,12 +114,14 @@
   background-repeat: no-repeat;
   background-size: contain;
   color: #fff;
-  background-color: #58b3ff;
+  /* background-color: #58b3ff; */
+  background-color: #5d5d5d4d;
 }
 
 .prevImageButton:hover,
 .nextImageButton:hover {
-  background-color: #539cff;
+  /* background-color: #539cff; */
+  background-color: #5d5d5d80;
 }
 
 .prevImageButton {

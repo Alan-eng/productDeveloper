@@ -121,6 +121,7 @@ class Projects extends Component {
                             <h2>Runes of norse</h2>
                             <h4>Education website</h4>
                             <p>Helps people to begin to study the runes (fascinating and mysterious symbols from the ancient Norse/Germanic world) </p>
+                            <h4 className={style.achievementsHeader}>I've done:</h4>
                             <ul>
                                 <li>design concept using <span className={style.technologyWord}>Photoshop</span></li>
                                 <li>layout coding with <span className={style.technologyWord}>HTML+CSS</span></li>
@@ -144,6 +145,7 @@ class Projects extends Component {
                             <h4>interactive table</h4>
 
                             <p>Help English language learners with grammar.</p>
+                            <h4 className={style.achievementsHeader}>I've done:</h4>
                             <ul>
                                 <li>material design components <span className={style.technologyWord}>Material UI + React</span></li>
                                 <li>layout coding with <span className={style.technologyWord}>HTML+CSS</span></li>
