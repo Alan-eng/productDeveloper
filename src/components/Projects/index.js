@@ -6,7 +6,12 @@ import superkassa1Img from './superkassa1.jpg';
 import superkassa2Img from './superkassa2.jpg';
 import superkassa3Img from './superkassa3.jpg';
 import runesImg from './runes.jpg';
+import runes1Img from './runes1.jpg';
+import runes2Img from './runes2.jpg';
+import runes3Img from './runes3.jpg';
 import tensesGeneratorImg from './tensesGenerator.jpg';
+import tensesGenerator1Img from './tensesGenerator1.jpg';
+import tensesGenerator2Img from './tensesGenerator2.jpg';
 import style from './index.css';
 
 class Projects extends Component {
@@ -106,7 +111,10 @@ class Projects extends Component {
 
                     runes: <Modal
                         images={[
-                            <img src={runesImg} alt="nordic runes site" />
+                            <img src={runesImg} alt="nordic runes site" />,
+                            <img src={runes1Img} alt="nordic runes site" />,
+                            <img src={runes2Img} alt="nordic runes site" />,
+                            <img src={runes3Img} alt="nordic runes site" />
                         ]}
                         show={this.state.modal} handleClose={this.hideModal}
                     >
@@ -116,24 +124,31 @@ class Projects extends Component {
                             <p>Helps people to begin to study the runes (fascinating and mysterious symbols from the ancient Norse/Germanic world) </p>
                             <h4 className={style.achievementsHeader}>My achievements:</h4>
                             <ul>
-                                <li>design concept using <span className={style.technologyWord}>Photoshop</span></li>
-                                <li>wrote whole site with pure <span className={style.technologyWord}>HTML+CSS+JS</span></li>
+                                <li>my design concept using <span className={style.technologyWord}>Photoshop</span></li>
+                                <li>layout coding with <span className={style.technologyWord}>HTML+CSS</span></li>
+                                <li>page animations using <span className={style.technologyWord}>jQuery</span></li>
                             </ul>
+                            <a className={style.linkProject1} href='https://alan-eng.github.io/runes/' target='_blank'>Runes of norse</a>
+
                         </div>
                     </Modal>,
 
                     tenses: <Modal
                         images={[
-                            <img src={tensesGeneratorImg} className={style.imgInModal} alt="superkassa site" />
+                            <img src={tensesGeneratorImg} className={style.imgInModal} alt="superkassa site" />,
+                            <img src={tensesGenerator1Img} className={style.imgInModal} alt="superkassa site" />,
+                            <img src={tensesGenerator2Img} className={style.imgInModal} alt="superkassa site" />
                         ]}
                         show={this.state.modal} handleClose={this.hideModal}
                     >
-                        <img src={tensesGeneratorImg} className={style.imgInModal} alt="superkassa site" />
                         <div className={style.contentInModal}>
                             <h2>Superkassa.ru</h2>
                             <h4>Airtickets sale</h4>
 
                             <p>Roambi provides analytics, reporting, and business intelligence for companies to use on the go. A Wordpress hosted site written in PHP and Javascript with Hubspot Integration.</p>
+
+                            <a className={style.linkProject1} href='https://alan-eng.github.io/english-tenses-generator/' target='_blank'>Tenses-generator</a>
+
                         </div>
                     </Modal>
                 }[this.state.modal]}
