@@ -1,3 +1,5 @@
+@import '../../../themes/variables.css';
+
 .root {
   display: flex;
   align-items: center;
@@ -27,6 +29,13 @@
   border-right: solid 3px #333333;
   z-index: 2;
   user-select: none;
+}
+
+@media (--only-mobile-screen) {
+  .hexagon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .hexagon:before,

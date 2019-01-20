@@ -11,7 +11,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, './dist'), // without output webpack livereload doesn't work
+        path: path.resolve(__dirname, './docs'), // without output webpack livereload doesn't work
         filename: 'index_bundle.js'
     },
     module: {
