@@ -67,6 +67,13 @@
   opacity: 0;
 }
 
+@media (--only-mobile-screen) {
+  .titleCard {
+    font-size: 22px;
+    margin: 0;
+  }
+}
+
 .card:hover .titleCard {
   top: 8%;
   opacity: 1;
