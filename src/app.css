@@ -14,9 +14,15 @@ body {
   min-height: 100vh;
   background-image: url('./backgroundJSOpacity.png'), linear-gradient(to right, rgba(78, 33, 93, 1), rgba(36, 7, 45, 1));
   width: 100%;
-  background-size: 1500px;
+  background-size: 100vw;
   background-position: right;
   background-attachment: fixed;
+}
+
+@media (--only-tablet-screen), (--only-mobile-screen) {
+  body {
+    background-size: 1500px;
+  }
 }
 
 *,

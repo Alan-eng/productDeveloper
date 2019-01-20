@@ -1,6 +1,5 @@
 import React from 'react'
 import ScrollableAnchor from "react-scrollable-anchor"
-import { FaEnvelope } from 'react-icons/fa';
 import gmailIcon from './gmailIcon.svg';
 import style from './index.css';
 
@@ -13,7 +12,6 @@ const Contacts = () => (
             <p>If you have any question, or just want to say hello, feel free to contact me ;)</p>
             <ul className={style.contactsUl}>
 
-                {/* <FaEnvelope className={style.envelope} /> */}
                 <img src={gmailIcon} className={style.envelope} />
                 <li className={style.contact}>alanb.develop@gmail.com</li>
 
