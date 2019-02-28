@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Transition from 'react-transition-group/Transition';
 import { AboutMe, SideBar, Contacts } from './components'
 import TechnologyStack from "./components/TechnologyStack"
+import ManagementStack from "./components/ManagementStack"
 import Projects from "./components/Projects"
 import Particles from 'react-particles-js';
 import { hot } from 'react-hot-loader'
@@ -87,6 +88,7 @@ class App extends Component {
 
                         <div className={`${style.centerContainer} ${this.state.stopScrolling ? style.fixed : ''}`}>
                             <AboutMe />
+                            <ManagementStack />
                             <TechnologyStack />
                             <Projects stopScrolling={this.stopScrolling} />
                             <Contacts />
@@ -152,7 +154,7 @@ class App extends Component {
                                         },
                                         "move": {
                                             "enable": true,
-                                            "speed": 3,
+                                            "speed": 2,
                                             "direction": "none",
                                             "random": false,
                                             "straight": false,

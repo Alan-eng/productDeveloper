@@ -1,0 +1,109 @@
+@import '../../../themes/variables.css';
+
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+}
+
+/* .label:nth-child(even) {
+  box-shadow: -8px 0px 4px 6px rgba(0, 0, 0, 0.5);
+} */
+
+.hexagon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 70px;
+  height: 40px;
+  background-color: #64c7cc;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  border-left: solid 3px #333333;
+  border-right: solid 3px #333333;
+  z-index: 2;
+  user-select: none;
+  font-size: 32px;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+}
+
+.hexagon:before {
+  top: -25px;
+  left: 7px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: inherit;
+  border-bottom: none;
+  border-left: none;
+}
+
+.hexagon:after {
+  bottom: -25px;
+  left: 7px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: inherit;
+  border-top: none;
+  border-right: none;
+}
+
+.hover {
+  filter: hue-rotate(120deg);
+}
+
+.hexagon:hover {
+  filter: hue-rotate(120deg);
+}
+
+.hexagon * {
+  z-index: 3;
+}
+
+.hexagonPlanning {
+  color: white;
+  background-color: #f16529;
+  border-color: #e44d26;
+}
+
+.hexagonPrioritizeNeeds {
+  color: #61dafb;
+  background-color: #261300;
+  border-color: #61dafb;
+}
+
+.hexagonCommunication {
+  color: #1abcfe;
+  background-color: #2e3139;
+  border-color: #1abcfe;
+}
+/* .hexagonCommunication {
+  color: #6d44b3;
+  background-color: #08003f;
+  border-color: #6d44b3;
+} */
+
+.hexagonLeadership {
+  background-color: #fff;
+  border-color: #085506;
+}
+
+
+/* ----------------------------------------------- */

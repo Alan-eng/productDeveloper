@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { FaBeer, FaPenAlt, FaHandsHelping, FaHammer, FaBars, FaTimes, FaBehance, FaGithub } from 'react-icons/fa';
+import { FaRocket, FaBeer, FaPenAlt, FaHandsHelping, FaHammer, FaBars, FaTimes, FaBehance, FaGithub } from 'react-icons/fa';
 import Transition from 'react-transition-group/Transition';
 
 import style from './index.css';
@@ -94,7 +94,7 @@ class SideBar extends Component {
                             </button>
                             <div className={style.sideBarTitle}>
                                 <h1 className={style.sideBarHeader}>Alan Betanov</h1> <br />
-                                <small>(Frontend developer)</small>
+                                <small>(Product developer)</small>
                             </div>
                             <div className={style.sideBarVerticalContainer}>
                                 <ul className={style.sideBarMenu}>
@@ -104,7 +104,7 @@ class SideBar extends Component {
                                             className={this.state.activeLink === 'aboutMe' ? style.activeLink : style.link}
                                             href='#aboutMe'>
                                             <FaBeer /> &nbsp; About Me
-                                </a>
+                                        </a>
                                     </li>
                                     <li>
                                         <a
@@ -112,8 +112,17 @@ class SideBar extends Component {
                                             className={this.state.activeLink === 'technologies' ? style.activeLink : style.link}
                                             href='#technologies'
                                         >
-                                            <FaHammer /> &nbsp; Technologies
-                                </a>
+                                            <FaRocket /> &nbsp; Soft Skills
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            onClick={() => this.setActiveLink('technologies')}
+                                            className={this.state.activeLink === 'technologies' ? style.activeLink : style.link}
+                                            href='#technologies'
+                                        >
+                                            <FaHammer /> &nbsp; Engeneering
+                                        </a>
                                     </li>
                                     <li>
                                         <a
@@ -122,7 +131,7 @@ class SideBar extends Component {
                                             href='#projects'
                                         >
                                             <FaHandsHelping /> &nbsp; Projects
-                                </a>
+                                        </a>
                                     </li>
                                     <li>
                                         <a

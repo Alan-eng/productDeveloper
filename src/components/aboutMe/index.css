@@ -48,16 +48,7 @@
   padding-top: 12px;
 }
 
-.headerAnimation {
-  display: inline-block;
-  position: relative;
-  animation: type 3s steps(9) infinite alternate;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: 'Oxygen Mono', monospace;
-}
-
-.headerAnimation:before {
+.cursor {
   animation: opacity 0.8s steps(2) infinite;
   content: '';
   position: absolute;

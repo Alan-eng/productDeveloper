@@ -64,11 +64,11 @@ class TechnologyStack extends Component {
         return (
             <div className={style.root} key={'myTechnologyStack'}>
                 <ScrollableAnchor id={'technologies'}>
-                    <h2 className={style.header}>Technology stack</h2>
+                    <h2 className={style.header}>My engineering background:</h2>
                 </ScrollableAnchor>
                 <div className={style.columnContainer}>
                     <div className={style.frontendStack}>
-                        <h4 className={style.headerSmall}>Develop</h4>
+                        <h4 className={style.headerSmall}>Web-Development</h4>
                         <Hexagon
                             key={'frontendStackHexagon1'}
                             className="hexagonJS"
@@ -271,7 +271,7 @@ class TechnologyStack extends Component {
                         </Hexagon>
                     </div>
                     <div className={style.designStack}>
-                        <h4 className={style.headerSmall}>Design</h4>
+                        <h4 className={style.headerSmall}>Web-Design</h4>
                         <Hexagon
                             key={'designerStackHexagon1'}
                             className="hexagonFigma"

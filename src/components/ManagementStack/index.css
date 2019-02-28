@@ -12,7 +12,6 @@
 .headerSmall {
   font-size: 24px;
   width: 200px;
-  white-space: nowrap;
 }
 
 @media (--only-very-small-mobile-screen) {
