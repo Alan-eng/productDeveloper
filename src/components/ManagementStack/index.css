@@ -100,8 +100,8 @@
   position: relative;
   animation: type 2s steps(16);
   overflow: hidden;
-  white-space: nowrap;
   font-family: 'Oxygen Mono', monospace;
+  white-space: nowrap;
 }
 
 .typeAnimation:before {

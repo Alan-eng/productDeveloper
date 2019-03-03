@@ -108,20 +108,11 @@ class SideBar extends Component {
                                     </li>
                                     <li>
                                         <a
-                                            onClick={() => this.setActiveLink('technologies')}
-                                            className={this.state.activeLink === 'technologies' ? style.activeLink : style.link}
-                                            href='#technologies'
+                                            onClick={() => this.setActiveLink('skills')}
+                                            className={this.state.activeLink === 'skills' ? style.activeLink : style.link}
+                                            href='#skills'
                                         >
-                                            <FaRocket /> &nbsp; Soft Skills
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            onClick={() => this.setActiveLink('technologies')}
-                                            className={this.state.activeLink === 'technologies' ? style.activeLink : style.link}
-                                            href='#technologies'
-                                        >
-                                            <FaHammer /> &nbsp; Engeneering
+                                            <FaRocket /> &nbsp; My Skills
                                         </a>
                                     </li>
                                     <li>

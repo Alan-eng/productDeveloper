@@ -5,6 +5,11 @@ import superkassaImg from './superkassa.jpg';
 import superkassa1Img from './superkassa1.jpg';
 import superkassa2Img from './superkassa2.jpg';
 import superkassa3Img from './superkassa3.jpg';
+import jslotImg from './jslot.jpg';
+import jslot1Img from './jslot1.jpg';
+import jslot2Img from './jslot2.jpg';
+import jslot3Img from './jslot3.jpg';
+import jslot4Img from './jslot4.jpg';
 import runesImg from './runes.jpg';
 import runes1Img from './runes1.jpg';
 import runes2Img from './runes2.jpg';
@@ -48,6 +53,19 @@ class Projects extends Component {
                             className={style.btnCard}
                             type="button"
                             onClick={() => this.showModal('superkassa')}
+                        >
+                            SHOW
+                        </button>
+                    </div>
+                </div>
+                <div className={style.card}>
+                    <img src={jslotImg} className={style.projectImg} alt="jslot site" />
+                    <div className={style.overlay}>
+                        <p className={style.titleCard}>jslot</p>
+                        <button
+                            className={style.btnCard}
+                            type="button"
+                            onClick={() => this.showModal('jslot')}
                         >
                             SHOW
                         </button>
@@ -105,6 +123,30 @@ class Projects extends Component {
                             </ul>
                             <a className={style.linkProject1} href='https://superkassa.ru' target='_blank'>Superkassa.ru</a>
 
+                        </div>
+                    </Modal>,
+
+                    jslot: <Modal
+                        images={[
+                            <img src={jslotImg} alt="jslot site" />,
+                            <img src={jslot1Img} alt="jslot site" />,
+                            <img src={jslot2Img} alt="jslot site" />,
+                            <img src={jslot3Img} alt="jslot site" />,
+                            <img src={jslot4Img} alt="jslot site" />,
+                        ]}
+                        show={this.state.modal} handleClose={this.hideModal}
+                    >
+                        <div className={style.contentInModal}>
+                            <h2>Jslot.ru</h2>
+                            <h4 className={style.achievementsHeader}>Gaming</h4>
+                            <p> Project for entertainment purposes.</p>
+
+                            <h4 className={style.achievementsHeader}>My achievements:</h4>
+                            <ul>
+                                <li>made product design with <span className={style.technologyWord}>Photoshop</span></li>
+                                {/* <li>made product more attractive and user-friendly with <span className={style.technologyWord}>A/B design testing</span></li> */}
+                            </ul>
+                            <a className={style.linkProject1} href='https://jslot.ru' target='_blank'>Jslot.ru</a>
                         </div>
                     </Modal>,
 

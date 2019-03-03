@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ScrollableAnchor from "react-scrollable-anchor"
 import Hexagon from './HexagonInteractive'
-import { FaFortAwesome, FaListOl, FaHandHoldingUsd, FaHandsHelping } from 'react-icons/fa';
+import { FaFortAwesome, FaListOl, FaHandHoldingUsd, FaHandsHelping, FaHammer, FaPalette } from 'react-icons/fa';
 import style from './index.css';
 
 class ManagementStack extends Component {
@@ -13,7 +13,7 @@ class ManagementStack extends Component {
         }
 
         this.intervalID;
-        this.animatedLabels = ['Planning', 'PrioritizeNeeds', 'Communication', 'Leadership'];
+        this.animatedLabels = ['Planning', 'PrioritizeNeeds', 'Communication', 'Leadership', 'EngineeringBackground', 'DesignBackground'];
         this.setInterval = this.setInterval.bind(this);
         this.clearInterval = this.clearInterval.bind(this);
         this.setLabel = this.setLabel.bind(this);
@@ -57,8 +57,8 @@ class ManagementStack extends Component {
         const animatedLabel = this.state.animatedLabel;
         return (
             <div className={style.root} key={'myTechnologyStack'}>
-                <ScrollableAnchor id={'technologies'}>
-                    <h2 className={style.header}>My strengths in management and leadership:</h2>
+                <ScrollableAnchor id={'skills'}>
+                    <h2 className={style.header}>My strengths:</h2>
                 </ScrollableAnchor>
                 <div className={style.columnContainer}>
                     <div className={style.frontendStack}>
@@ -81,7 +81,7 @@ class ManagementStack extends Component {
                             label={
                                 animatedLabel === 'Communication' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                       I have the ability to understand and being understood
+                                       ability to understand and being understood
                                     </span> : null
                             }
                         >
@@ -106,7 +106,7 @@ class ManagementStack extends Component {
                             label={
                                 animatedLabel === 'Planning' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        I always try to organize tasks in the right order
+                                        organize tasks in the right order
                                     </span> : null
                             }
                         >
@@ -131,7 +131,7 @@ class ManagementStack extends Component {
                             label={
                                 animatedLabel === 'PrioritizeNeeds' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        I'm weighing priorities according to the needs
+                                        weighing priorities according to the needs
                                     </span> : null
                             }
                         >
@@ -157,11 +157,63 @@ class ManagementStack extends Component {
                             label={
                                 animatedLabel === 'Leadership' ?
                                     <span className={`${style.label} ${style.typeAnimation}`}>
-                                        I'm able to manage team and resolve conflicts
+                                        manage team and resolve conflicts
                                     </span> : null
                             }
                         >
                             <FaFortAwesome />
+                        </Hexagon>
+
+                        <Hexagon
+                            key={'frontendStackHexagon5'}
+                            className="hexagonEngineeringBackground"
+                            isActive={animatedLabel === 'EngineeringBackground' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('EngineeringBackground');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
+                            labelStatic={
+                                <span className={`${style.labelStatic}`}>
+                                    Engineering Background
+                                </span>
+                            }
+                            label={
+                                animatedLabel === 'EngineeringBackground' ?
+                                    <span className={`${style.label} ${style.typeAnimation}`}>
+                                        experience in frontend development
+                                    </span> : null
+                            }
+                        >
+                            <FaHammer />
+                        </Hexagon>
+
+                        <Hexagon
+                            key={'frontendStackHexagon5'}
+                            className="hexagonDesignBackground"
+                            isActive={animatedLabel === 'DesignBackground' ? true : false}
+                            onMouseOver={() => {
+                                this.clearInterval();
+                                this.setLabel('DesignBackground');
+                            }}
+                            onMouseLeave={() => {
+                                this.setInterval();
+                            }}
+                            labelStatic={
+                                <span className={`${style.labelStatic}`}>
+                                    Design Background
+                                </span>
+                            }
+                            label={
+                                animatedLabel === 'DesignBackground' ?
+                                    <span className={`${style.label} ${style.typeAnimation}`}>
+                                        experience in web-design
+                                    </span> : null
+                            }
+                        >
+                            <FaPalette />
                         </Hexagon>
                     </div>
                 </div>

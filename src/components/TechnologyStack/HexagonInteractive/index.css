@@ -21,6 +21,7 @@
   align-items: center;
   position: relative;
   width: 70px;
+  min-width: 70px;
   height: 40px;
   background-color: #64c7cc;
   margin-top: 14px;

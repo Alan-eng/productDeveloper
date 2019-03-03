@@ -89,7 +89,7 @@ class App extends Component {
                         <div className={`${style.centerContainer} ${this.state.stopScrolling ? style.fixed : ''}`}>
                             <AboutMe />
                             <ManagementStack />
-                            <TechnologyStack />
+                            {/* <TechnologyStack /> */}
                             <Projects stopScrolling={this.stopScrolling} />
                             <Contacts />
                         </div>

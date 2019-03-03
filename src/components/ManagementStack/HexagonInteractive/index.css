@@ -21,6 +21,7 @@
   align-items: center;
   position: relative;
   width: 70px;
+  min-width: 70px;
   height: 40px;
   background-color: #64c7cc;
   margin-top: 14px;
@@ -66,43 +67,34 @@
 }
 
 .hover {
-  filter: hue-rotate(120deg);
+  border-color: #bf2390;
+
+}
+
+.hover > div {
+  border-color: #bf2390;
+  color: #caaec0;
 }
 
 .hexagon:hover {
-  filter: hue-rotate(120deg);
+  border-color: #bf2390;
+
 }
 
 .hexagon * {
   z-index: 3;
 }
 
-.hexagonPlanning {
-  color: white;
-  background-color: #f16529;
-  border-color: #e44d26;
-}
-
-.hexagonPrioritizeNeeds {
-  color: #61dafb;
-  background-color: #261300;
-  border-color: #61dafb;
-}
-
-.hexagonCommunication {
-  color: #1abcfe;
-  background-color: #2e3139;
-  border-color: #1abcfe;
-}
-/* .hexagonCommunication {
-  color: #6d44b3;
-  background-color: #08003f;
-  border-color: #6d44b3;
-} */
-
-.hexagonLeadership {
-  background-color: #fff;
-  border-color: #085506;
+.hexagonCommunication,
+.hexagonPlanning,
+.hexagonPrioritizeNeeds,
+.hexagonLeadership,
+.hexagonEngineeringBackground,
+.hexagonDesignBackground {
+  color: #caaec0;
+  color: #539cff;
+  background-color: #220117;
+  border-color: #539cff;
 }
 
 
